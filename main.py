@@ -20,7 +20,7 @@ class Pokemon(commands.Cog):
 
     async def startgame(self,ctx,author):
         checkuser = db.CheckUser(self,author.id,"rcount")
-        if checkuser.rowcount > 0:
+        if checkuser > 0:
             embed = discord.Embed(title="PickPokemon " + author.name,description="Pick Your Starter Pokemon Using " + bot.get_prefix + "pick <pokemon>")
             embed.add_field(name="Starter Pokemon",value="Charmander|Squirtle|Bulbasaur",inline=True)
             await ctx.send(embed=embed)
