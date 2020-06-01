@@ -12,6 +12,7 @@ def GetBalance(self, id):
 def InputUser(self,id,name):
     insert = "INSERT INTO user(user_id,nickname,balance) VALUES('"+ str(id) + "','" + str(name)  +"', 0 );"
     cursor.execute(insert)
+    connection.commit()
 
 def CheckUser(self,id,act):
     retrive = "SELECT * FROM user WHERE user_id = " + str(id)
@@ -25,5 +26,6 @@ def CheckUser(self,id,act):
 def UpdateUserPokemon(self,id,pokename):
     updateData = "UPDATE user SET pokestart="+pokename+"WHERE user_id=" + str(id)
     cursor.execute(updateData)
+    connection.commit()
     
 
