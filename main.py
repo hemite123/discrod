@@ -33,14 +33,14 @@ class Pokemon(commands.Cog):
 
     async def pickpokemon(self,ctx,author,pokemonname):
         checkuser = db.CheckUser(self,author.id,"")
-        print(checkuser)
-        if checkuser[3] is None:
-            db.UpdateUserPokemon(self,author.id,pokemonname)
-            embed = discord.Embed(title="Pokemon Select" + author.name,description="Your Starter Pokemon Is" + pokemonname)
-            await ctx.send(embed=embed)
-        else:
-            embed = discord.Embed(title="Pokemon Select" + author.name,description="Your Have Already Pokemon Starter")
-            await ctx.send(embed=embed)
+        for cuser in checkuser:
+            if cuser[3] is None:
+                db.UpdateUserPokemon(self,author.id,pokemonname)
+                embed = discord.Embed(title="Pokemon Select" + author.name,description="Your Starter Pokemon Is" + pokemonname)
+                await ctx.send(embed=embed)
+            else:
+                embed = discord.Embed(title="Pokemon Select" + author.name,description="Your Have Already Pokemon Starter")
+                await ctx.send(embed=embed)
 
 
 

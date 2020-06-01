@@ -8,6 +8,7 @@ def GetBalance(self, id):
     cursor.execute(retrive)
     rows = cursor.fetchone()
     return rows
+    connection.commit()
 
 def InputUser(self,id,name):
     insert = "INSERT INTO user(user_id,nickname,balance) VALUES('"+ str(id) + "','" + str(name)  +"', 0 );"
@@ -22,6 +23,7 @@ def CheckUser(self,id,act):
         return cursor.rowcount
     else:
         return rows
+    connection.commit()        
 
 def UpdateUserPokemon(self,id,pokename):
     updateData = "UPDATE user SET pokestart="+pokename+"WHERE user_id=" + str(id)
