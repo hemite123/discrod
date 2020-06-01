@@ -26,7 +26,7 @@ def CheckUser(self,id,act):
     connection.commit()        
 
 def UpdateUserPokemon(self,id,pokename):
-    updateData = "UPDATE user SET pokestart="+pokename+"WHERE user_id=" + str(id)
+    updateData = "UPDATE user SET pokestart='"+pokename+"'WHERE user_id=" + str(id)
     cursor.execute(updateData)
     connection.commit()
     
