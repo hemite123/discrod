@@ -21,19 +21,19 @@ class Pokemon(commands.Cog):
 
     async def startgame(self,ctx,author):
         checkuser = db.CheckUser(self,author.id,"rcount")
-        print(checkuser)
         if checkuser > 0:
-            embed = discord.Embed(title="PickPokemon " + author.name,description="Pick Your Starter Pokemon Using " + defaultpref[0] + "pick <pokemon>")
+            embed = discord.Embed(title="Pick Pokemon " + author.name,description="Pick Your Starter Pokemon Using " + defaultpref[0] + "pick <pokemon>")
             embed.add_field(name="Starter Pokemon",value="Charmander|Squirtle|Bulbasaur",inline=True)
             await ctx.send(embed=embed)
         else:
             db.InputUser(self,author.id,author.name)
-            embed = discord.Embed(title="PickPokemon " + author.name,description="Pick Your Starter Pokemon Using " + defaultpref[0] + "pick <pokemon>")
+            embed = discord.Embed(title="Pick Pokemon " + author.name,description="Pick Your Starter Pokemon Using " + defaultpref[0] + "pick <pokemon>")
             embed.add_field(name="Starter Pokemon",value="Charmander|Squirtle|Bulbasaur",inline=True)
             await ctx.send(embed=embed)
 
     async def pickpokemon(self,ctx,author,pokemonname):
         checkuser = db.CheckUser(self,author.id,"")
+        print(checkuser)
         if checkuser[3] is None:
             db.UpdateUserPokemon(self,author.id,pokemonname)
             embed = discord.Embed(title="Pokemon Select" + author.name,description="Your Starter Pokemon Is" + pokemonname)
