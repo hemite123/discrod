@@ -6,7 +6,8 @@ import pymysql
 
 pokemonname = [] 
 pokeserverspawn = []
-bot = commands.Bot(command_prefix='poke')
+defaultpref = ['poke']
+bot = commands.Bot(command_prefix= defaultpref[0])
 
 class Pokemon(commands.Cog):
 
@@ -22,12 +23,12 @@ class Pokemon(commands.Cog):
         checkuser = db.CheckUser(self,author.id,"rcount")
         print(checkuser)
         if checkuser > 0:
-            embed = discord.Embed(title="PickPokemon " + author.name,description="Pick Your Starter Pokemon Using " + bot.get_prefix + "pick <pokemon>")
+            embed = discord.Embed(title="PickPokemon " + author.name,description="Pick Your Starter Pokemon Using " + defaultpref[0] + "pick <pokemon>")
             embed.add_field(name="Starter Pokemon",value="Charmander|Squirtle|Bulbasaur",inline=True)
             await ctx.send(embed=embed)
         else:
             db.InputUser(self,author.id,author.name)
-            embed = discord.Embed(title="PickPokemon " + author.name,description="Pick Your Starter Pokemon Using " + bot.get_prefix + "pick <pokemon>")
+            embed = discord.Embed(title="PickPokemon " + author.name,description="Pick Your Starter Pokemon Using " + defaultpref[0] + "pick <pokemon>")
             embed.add_field(name="Starter Pokemon",value="Charmander|Squirtle|Bulbasaur",inline=True)
             await ctx.send(embed=embed)
 
