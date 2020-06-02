@@ -6,8 +6,8 @@ import pymysql
 import random
 
 pokemonname = [] 
-pokeserverspawn = []
-channeltospawn = []
+pokeserverspawntimer = []
+pokeserverpokemonname = []
 defaultpref = ['poke']
 bot = commands.Bot(command_prefix= defaultpref[0])
 
@@ -47,8 +47,11 @@ class Pokemon(commands.Cog):
 
     async def catchpokemon(self,ctx,author,pokemonname):
         checkuser = db.CheckUser(self,author.id,"rcount")
-        if checkuser > 0:
-            do = 0
+        for serverpokemon in pokeserverpokemonname:
+            for pns in pokeserverpokemonname[serverpokemon]:
+                if pns[0] == ctx.channel.id:
+                    if pns[1] == pokemonname:
+                        print("correct")
         else:
             await ctx.send("<@"+author.id+"> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
@@ -56,7 +59,21 @@ class Pokemon(commands.Cog):
 
 @bot.event
 async def on_message(message):
-    print(message.content)
+    if len(pokeserverspawntimer == 0):
+        pokeserverspawntimer.append((message.channel.id,random.randrange(500,1000)))
+    else:
+        for cserver in pokeserverspawntimer:
+            for channeldata in pokeserverspawntimer[cserver]:
+                if(channeldata[0] == message.channel.id):
+                    if(channeldata[1] > 0 ){
+                        channeldata[1] = channeldata[1] - 1
+                    }else{
+                        pokeserverpokemonname.append((message.channel.id,pokemonname[random.randrange(len(pokemonname))]))
+                        print(pokeserverpokemonname[0][1])
+                    }
+                elif message.channel.id not in channeldata[0]:
+                    pokeserverspawntimer.append((message.channel.id,random.randrange(500,1000)))
+                
     await bot.process_commands(message)
 
 @bot.event
@@ -81,7 +98,11 @@ async def start(ctx):
 async def pick(ctx,pokemons):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.pickpokemon(ctx,ctx.author,pokemons)
-    
+
+@bot.command(name="catch",help="Catch Wild Pokemon Spawn In Chat")
+async def catch(ctx,pokename):
+    pokemon = bot.get_cog("Pokemon")
+    await pokemon.pickpokemon(ctx,ctx.author,pokename)
         
 
 def pokemondata():
