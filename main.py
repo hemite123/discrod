@@ -59,14 +59,14 @@ class Pokemon(commands.Cog):
 @bot.event
 async def on_message(message):
     if len(pokeserverspawntimer) == 0:
-        pokeserverspawntimer.append((message.channel.id,random.randrange(500,1000)))
+        pokeserverspawntimer.append([message.channel.id,random.randrange(500,1000)])
     else:
         for i in range(len(pokeserverspawntimer)):
                 if pokeserverspawntimer[i][0] == message.channel.id:
                     if pokeserverspawntimer[i][1] > 0:
                         pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
                     else:
-                        pokeserverpokemonname.append((message.channel.id,pokemonname[random.randrange(len(pokemonname))]))
+                        pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))])
                         print(pokeserverpokemonname[0][1])
                 elif message.channel.id not in pokeserverspawntimer[i][0]:
                     pokeserverspawntimer.append((message.channel.id,random.randrange(500,1000)))
