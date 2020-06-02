@@ -6,7 +6,7 @@ cursor = connection.cursor()
 def GetBalance(self, id):
     retrive = "SELECT balance FROM user WHERE user_id = " + str(id)
     cursor.execute(retrive)
-    rows = cursor.fetchone()
+    rows = cursor.fetchall()
     return rows
     connection.commit()
 
