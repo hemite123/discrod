@@ -3,9 +3,11 @@ from discord.ext import commands
 import requests
 import db
 import pymysql
+import random
 
 pokemonname = [] 
 pokeserverspawn = []
+channeltospawn = []
 defaultpref = ['poke']
 bot = commands.Bot(command_prefix= defaultpref[0])
 
@@ -53,9 +55,8 @@ class Pokemon(commands.Cog):
 
 
 @bot.event
-async def on_ready(message):
-    await message.channel.send("Hello")
-    await bot.process_commands(message)
+async def on_message(message):
+    print(message.content)
         
 
 
