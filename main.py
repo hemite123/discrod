@@ -63,7 +63,8 @@ async def on_message(message):
 async def on_ready():
     c = discord.Client()
     chanell = c.get_all_channels()
-    print(chanell)    
+    for chn in chanell:
+        print(chn)   
 
 
 @bot.command(name="balance",help="See Your Balance")
