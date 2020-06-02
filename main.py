@@ -70,6 +70,9 @@ async def on_message(message):
                         else:
                             pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
                             print(pokeserverpokemonname[0][1])
+                            embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                            await message.channel.send(embed=embed)
+                            await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
                     elif message.channel.id not in pokeserverspawntimer[i][0]:
                         pokeserverspawntimer.append((message.channel.id,random.randrange(1,20)))
                 
@@ -101,7 +104,7 @@ async def pick(ctx,pokemons):
 @bot.command(name="catch",help="Catch Wild Pokemon Spawn In Chat")
 async def catch(ctx,pokename):
     pokemon = bot.get_cog("Pokemon")
-    await pokemon.pickpokemon(ctx,ctx.author,pokename)
+    await pokemon.catchpokemon(ctx,ctx.author,pokename)
         
 
 def pokemondata():
