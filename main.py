@@ -57,6 +57,10 @@ class Pokemon(commands.Cog):
 @bot.event
 async def on_message(message):
     print(message.content)
+    await bot.process_commands(message)
+
+async def on_ready():
+    print(bot.get_all_channels)
         
 
 
