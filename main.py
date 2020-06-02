@@ -35,15 +35,27 @@ class Pokemon(commands.Cog):
         checkuser = db.CheckUser(self,author.id,"")
         for cuser in checkuser:
             if cuser[3] is None:
+                
                 db.UpdateUserPokemon(self,author.id,pokemonname)
-                embed = discord.Embed(title="Pokemon Select" + author.name,description="Your Starter Pokemon Is" + pokemonname)
+                embed = discord.Embed(title="Pokemon Select " + author.name,description=" Your Starter Pokemon Is " + pokemonname)
                 await ctx.send(embed=embed)
             else:
-                embed = discord.Embed(title="Pokemon Select" + author.name,description="Your Have Already Pokemon Starter")
+                embed = discord.Embed(title="Pokemon Select " + author.name,description="Your Have Already Pokemon Starter")
                 await ctx.send(embed=embed)
 
+    async def catchpokemon(self,ctx,author,pokemonname):
+        checkuser = db.CheckUser(self,author.id,"rcount")
+        if checkuser > 0:
+            do = 0
+        else:
+            await ctx.send("<@"+author.id+"> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
 
+
+@bot.event
+async def on_message(ctx,message):
+    if "not" in message.content:
+        await ctx.send("Hello")
         
 
 
