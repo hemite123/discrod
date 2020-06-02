@@ -59,6 +59,7 @@ class Pokemon(commands.Cog):
 @bot.event
 async def on_message(message):
     if message.content is not None:
+        print(message.content)
         if len(pokeserverspawntimer) == 0:
             pokeserverspawntimer.append([message.channel.id,random.randrange(500,1000)])
         else:
