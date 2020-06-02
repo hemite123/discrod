@@ -52,7 +52,7 @@ class Pokemon(commands.Cog):
                     if pokeserverpokemonname[i][1] == pokemonname:
                         print("correct")
         else:
-            await ctx.send("<@"+author.id+"> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
+            await ctx.send("You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
 
 
@@ -68,11 +68,23 @@ async def on_message(message):
                         if pokeserverspawntimer[i][1] > 0:
                             pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
                         else:
-                            pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
-                            print(pokeserverpokemonname[0][1])
-                            embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                            await message.channel.send(embed=embed)
-                            await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
+                            if len(pokeserverpokemonname == 0):
+                                pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
+                                print(pokeserverpokemonname[0][1])
+                                embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                                await message.channel.send(embed=embed)
+                                await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
+                            else: 
+                                for j in range(len(pokeserverpokemonname)):
+                                    if pokeserverpokemonname[j][0] == message.channel.id:
+                                        if pokeserverpokemonname[j][1] is None:
+                                            pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
+                                            print(pokeserverpokemonname[0][1])
+                                            embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                                            await message.channel.send(embed=embed)
+                                            await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
+                                         else:
+                                            return
                     elif message.channel.id not in pokeserverspawntimer[i][0]:
                         pokeserverspawntimer.append((message.channel.id,random.randrange(1,20)))
                 
