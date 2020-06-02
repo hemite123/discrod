@@ -69,7 +69,7 @@ async def on_message(message):
                         if pokeserverspawntimer[i][1] > 0:
                             pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
                         else:
-                            if len(pokeserverpokemonname == 0):
+                            if len(pokeserverpokemonname) == 0:
                                 pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
                                 print(pokeserverpokemonname[0][1])
                                 embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
