@@ -53,9 +53,9 @@ class Pokemon(commands.Cog):
 
 
 @bot.event
-async def on_message(ctx,message):
+async def on_message(message):
     if "not" in message.content:
-        await ctx.send("Hello")
+        await bot.send("Hello")
         
 
 
