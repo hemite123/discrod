@@ -16,7 +16,7 @@ class Pokemon(commands.Cog):
 
     async def getbalance(self,ctx,author):
         balance = db.GetBalance(self,author.id)
-        embed = discord.Embed(title="Balance " + author.name,description="Your Balance is " + str(balance))
+        embed = discord.Embed(title="Balance " + author.name,description="Your Balance is " + str(balance[0]))
         await ctx.send(embed=embed)
 
     async def startgame(self,ctx,author):
@@ -58,9 +58,9 @@ async def start(ctx):
     await pokemon.startgame(ctx,ctx.author)
 
 @bot.command(name="pick",help="Pick Pokemon Starter")
-async def pick(ctx,pokemon):
+async def pick(ctx,pokemons):
     pokemon = bot.get_cog("Pokemon")
-    await pokemon.pickpokemon(ctx,ctx.author,pokemon)
+    await pokemon.pickpokemon(ctx,ctx.author,pokemons)
     
         
 

@@ -11,7 +11,7 @@ def GetBalance(self, id):
     connection.commit()
 
 def InputUser(self,id,name):
-    insert = "INSERT INTO user(user_id,nickname,balance) VALUES('"+ str(id) + "','" + str(name)  +"', 0 );"
+    insert = "INSERT INTO user(user_id,nickname,balance) VALUES('"+ str(id) + "','" + str(name)  +"',0);"
     cursor.execute(insert)
     connection.commit()
 
