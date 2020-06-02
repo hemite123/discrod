@@ -59,6 +59,7 @@ async def on_message(message):
     print(message.content)
     await bot.process_commands(message)
 
+@bot.event
 async def on_ready():
     c = discord.Client()
     chanell = c.get_all_channels()
