@@ -65,12 +65,11 @@ async def on_message(message):
         for cserver in pokeserverspawntimer:
             for channeldata in pokeserverspawntimer[cserver]:
                 if(channeldata[0] == message.channel.id):
-                    if(channeldata[1] > 0 ){
+                    if(channeldata[1] > 0 ):
                         channeldata[1] = channeldata[1] - 1
-                    }else{
+                    else:
                         pokeserverpokemonname.append((message.channel.id,pokemonname[random.randrange(len(pokemonname))]))
                         print(pokeserverpokemonname[0][1])
-                    }
                 elif message.channel.id not in channeldata[0]:
                     pokeserverspawntimer.append((message.channel.id,random.randrange(500,1000)))
                 
