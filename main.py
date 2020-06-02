@@ -47,10 +47,11 @@ class Pokemon(commands.Cog):
 
     async def catchpokemon(self,ctx,author,pokemonname):
         checkuser = db.CheckUser(self,author.id,"rcount")
-        for i in range(len(pokeserverpokemonname)):
-                if pokeserverpokemonname[i][0] == ctx.channel.id:
-                    if pokeserverpokemonname[i][1] == pokemonname:
-                        print("correct")
+        if checkuser > 0:
+            for i in range(len(pokeserverpokemonname)):
+                    if pokeserverpokemonname[i][0] == ctx.channel.id:
+                        if pokeserverpokemonname[i][1] == pokemonname:
+                            print("correct")
         else:
             await ctx.send("You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
@@ -83,7 +84,7 @@ async def on_message(message):
                                             embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
                                             await message.channel.send(embed=embed)
                                             await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
-                                         else:
+                                        else:
                                             return
                     elif message.channel.id not in pokeserverspawntimer[i][0]:
                         pokeserverspawntimer.append((message.channel.id,random.randrange(1,20)))
