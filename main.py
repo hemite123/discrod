@@ -61,7 +61,7 @@ async def on_message(message):
     if message.content is not None:
         print(message.content)
         if len(pokeserverspawntimer) == 0:
-            pokeserverspawntimer.append([message.channel.id,random.randrange(500,1000)])
+            pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
         else:
             for i in range(len(pokeserverspawntimer)):
                     if pokeserverspawntimer[i][0] == message.channel.id:
@@ -71,7 +71,7 @@ async def on_message(message):
                             pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
                             print(pokeserverpokemonname[0][1])
                     elif message.channel.id not in pokeserverspawntimer[i][0]:
-                        pokeserverspawntimer.append((message.channel.id,random.randrange(500,1000)))
+                        pokeserverspawntimer.append((message.channel.id,random.randrange(1,20)))
                 
     await bot.process_commands(message)
 
