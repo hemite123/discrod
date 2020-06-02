@@ -54,7 +54,7 @@ class Pokemon(commands.Cog):
 
 @bot.event
 async def on_message(message):
-    await bot.send_message(message.channel,content="Hello")
+    await message.channel.send("Hello")
     await bot.process_commands(message)
         
 
