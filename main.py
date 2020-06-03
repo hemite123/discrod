@@ -54,7 +54,7 @@ class Pokemon(commands.Cog):
                         if pokeserverpokemonname[i][1] == pokemonname:
                             print("correct")
         else:
-            await ctx.send("You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
+            await ctx.send("<@ + author.id"> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
 
 
