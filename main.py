@@ -159,6 +159,7 @@ def pokemondata():
      for namepokemon in data_json['results']:
         response1 = requests.get(namepokemon["url"])
         djson = response1.json()
+        print(djson["id"])
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]))
         datajson = responseapi.json()
         print(datajson[0]["name"])
