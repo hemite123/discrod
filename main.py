@@ -164,7 +164,7 @@ def pokemondata():
         datajson = responseapi.json()
         for info in datajson:
             if len(info) > 1:
-               if info[0]["starter"] == "true":
+                if info[0]["starter"] == "true":
                     pstart.append(info[0]['name'])
                 elif info[0]["legendary"] == "true":
                     plegend.append(info[0]['name'])
