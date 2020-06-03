@@ -168,6 +168,7 @@ def pokemondata():
         elif datajson[0]["mythical"]:
             pmythical.append(datajson[0]['name'])
         for fam in datajson[0]["family"]:
+            print(fam)
             for einfo in fam[2]:
                 if len(einfo) == 2:
                     pevo1.append(einfo[0])
