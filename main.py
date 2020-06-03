@@ -161,8 +161,8 @@ def pokemondata():
         print(i)
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i) , headers={"User-Agent": "BastionDiscordBot (https://bastionbot.org, v6.16.1)"})
         datajson = responseapi.json()
+        print(datajson)
         try:
-            print(datajson[0]["name"])
             if datajson[0]["starter"]:
                 pstart.append(datajson[0]['name'])
             elif datajson[0]["legendary"]:
