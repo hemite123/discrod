@@ -121,7 +121,7 @@ async def on_message(message):
                 embed.set_image(url=data_json["sprites"]["front_default"])
             await message.channel.send(embed=embed)
             await message.channel.send("pokemon name " + pokename )
-            break
+           
                 
                 
                 
