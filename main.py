@@ -159,7 +159,8 @@ def pokemondata():
     request = r1.json()
     count = request["total"]
     for i in range(1,count):
-        print(i)
+        if i == 500:
+            time.sleep(30)
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i) , headers={"User-Agent": "BastionDiscordBot (https://bastionbot.org, v6.16.1)"})
         datajson = responseapi.json()
         print(datajson[0]["name"])
@@ -180,7 +181,6 @@ def pokemondata():
                     pevo3.append(einfo[2])
                 else:
                     pevo1.append(einfo[0])
-            time.sleep(2)
         except Exception as e:
            print("ERROR")
 pokemondata()
