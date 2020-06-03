@@ -160,10 +160,8 @@ def pokemondata():
     count = request["total"]
     for i in range(1,count):
         if i == 500:
-            time.sleep(300)
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i) , headers={"User-Agent": "BastionDiscordBot (https://bastionbot.org, v6.16.1)"})
         datajson = responseapi.json()
-        print(datajson[0]["name"])
         try:
             if datajson[0]["starter"]:
                 pstart.append(datajson[0]['name'])
