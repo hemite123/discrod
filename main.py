@@ -89,7 +89,7 @@ async def on_message(message):
                      
             if servertimeno == False:
                     print("test")
-                    pokeserverspawntimer.append((str(message.channel.id),random.randrange(1,20)))
+                    pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
                 
     await bot.process_commands(message)
 
