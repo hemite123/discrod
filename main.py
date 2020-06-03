@@ -154,13 +154,11 @@ async def catch(ctx,pokename):
         
 
 def pokemondata():
-     response = requests.get("https://pokeapi.co/api/v2/pokemon?limit=964")
-     data_json = response.json()
-     for namepokemon in data_json['results']:
-        response1 = requests.get(namepokemon["url"])
-        djson = response1.json()
-        print(djson["id"])
-        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]))
+    r1 = requests.get("https://pokeapi.glitch.me/v1/pokemon/counts")
+    req = r1.json()
+    count = req["total"]
+    for i in range(count):
+        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i))
         datajson = responseapi.json()
         try:
             print(datajson[0]["name"])
@@ -179,7 +177,7 @@ def pokemondata():
                     pevo2.append(einfo[1])
                     pevo3.append(einfo[2])
         except:
-            print("error unknown true")
+            print("error unknown data")
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
