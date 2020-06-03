@@ -161,42 +161,42 @@ def pokemondata():
         response1 = requests.get(namepokemon["url"])
         djson = response1.json()
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]),headers=headers)
-            datajson = responseapi.json()
-            for info in datajson:
-                if len(info) > 1:
-                    if info[0]["starter"] == "true":
-                        pstart.append(info[0]['name'])
-                    elif info[0]["legendary"] == "true":
-                        plegend.append(info[0]['name'])
-                    elif info[0]["mythical"] == "true":
-                        pmythical.append(info[0]['name'])
-                    elif info[1]["name"] == "Alolan " + info[0]["name"]:
-                        palolan.append(info[1]["name"])
-                    for fam in info["family"]:
-                        for einfo in fam["evolutionLine"]:
-                            if len(einfo) == 2:
-                                pevo1.append(einfo[0])
-                                pevo2.append(einfo[1])
-                            elif len(einfo) == 3:
-                                pevo1.append(einfo[0])
-                                pevo2.append(einfo[1])
-                                pevo3.append(einfo[2])
-                else:
-                    if info["starter"] == "true":
-                        pstart.append(info['name'])
-                    elif info["legendary"] == "true":
-                        plegend.append(info['name'])
-                    elif info["mythical"] == "true":
-                        pmythical.append(info['name'])
-                    for fam in info["family"]:
-                        for einfo in fam["evolutionLine"]:
-                            if len(einfo) == 2:
-                                pevo1.append(einfo[0])
-                                pevo2.append(einfo[1])
-                            elif len(einfo) == 3:
-                                pevo1.append(einfo[0])
-                                pevo2.append(einfo[1])
-                                pevo3.append(einfo[2])
+        datajson = responseapi.json()
+        for info in datajson:
+            if len(info) > 1:
+               if info[0]["starter"] == "true":
+                    pstart.append(info[0]['name'])
+                elif info[0]["legendary"] == "true":
+                    plegend.append(info[0]['name'])
+                elif info[0]["mythical"] == "true":
+                    pmythical.append(info[0]['name'])
+                elif info[1]["name"] == "Alolan " + info[0]["name"]:
+                    palolan.append(info[1]["name"])
+                for fam in info["family"]:
+                    for einfo in fam["evolutionLine"]:
+                        if len(einfo) == 2:
+                            pevo1.append(einfo[0])
+                            pevo2.append(einfo[1])
+                        elif len(einfo) == 3:
+                            pevo1.append(einfo[0])
+                            pevo2.append(einfo[1])
+                            pevo3.append(einfo[2])
+            else:
+                if info["starter"] == "true":
+                    pstart.append(info['name'])
+                elif info["legendary"] == "true":
+                    plegend.append(info['name'])
+                elif info["mythical"] == "true":
+                    pmythical.append(info['name'])
+                for fam in info["family"]:
+                    for einfo in fam["evolutionLine"]:
+                        if len(einfo) == 2:
+                            pevo1.append(einfo[0])
+                            pevo2.append(einfo[1])
+                        elif len(einfo) == 3:
+                            pevo1.append(einfo[0])
+                            pevo2.append(einfo[1])
+                            pevo3.append(einfo[2])
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
