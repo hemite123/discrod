@@ -162,11 +162,11 @@ def pokemondata():
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]))
         datajson = responseapi.json()
         if datajson[0]["starter"]:
-            pstart.append(info[0]['name'])
+            pstart.append(datajson[0]['name'])
         elif datajson[0]["legendary"]:
-            plegend.append(info[0]['name'])
+            plegend.append(datajson[0]['name'])
         elif datajson[0]["mythical"]:
-            pmythical.append(info[0]['name'])
+            pmythical.append(datajson[0]['name'])
         for fam in datajson[0]["family"]:
             for einfo in fam["evolutionLine"]:
                 if len(einfo) == 2:
