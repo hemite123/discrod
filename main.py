@@ -161,6 +161,7 @@ def pokemondata():
         djson = response1.json()
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]))
         datajson = responseapi.json()
+        print(datajson)
         for info in datajson:
             if len(info) > 1:
                 if info[0]["starter"] == "true":
