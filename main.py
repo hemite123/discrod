@@ -77,7 +77,8 @@ async def on_message(message):
                                 if pokeserverpokemonname[j][1] is None:
                                     pokename = pokemonname[random.randrange(len(pokemonname))]
                                     pokeserverpokemonname.append([str(message.channel.id),pokename])
-                                    response = requests.get("https://pokeapi.co/api/v2/pokemon/"+pokename)
+                                    requestname = "https://pokeapi.co/api/v2/pokemon/" + pokename
+                                    response = requests.get(requestname)
                                     data_json = response.json()
                                     print(data_json)
                                     for namepokemon in data_json['sprites']:
