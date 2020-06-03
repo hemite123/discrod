@@ -156,7 +156,7 @@ async def catch(ctx,pokename):
 def pokemondata():
      headers = {'User-Agent: BastionDiscordBot (https://bastionbot.org, v6.16.1)'}
      response = requests.get("https://pokeapi.co/api/v2/pokemon?limit=964")
-     data_json = responseapi.json()
+     data_json = response.json()
      for namepokemon in data_json['results']:
         response1 = requests.get(namepokemon["url"])
         djson = response1.json()
@@ -176,12 +176,12 @@ def pokemondata():
                     for fam in info["family"]:
                         for einfo in fam["evolutionLine"]:
                             if len(einfo) == 2:
-                                pevo1.append[einfo[0]]
-                                pevo2.append[einfo[1]]
+                                pevo1.append(einfo[0])
+                                pevo2.append(einfo[1])
                             elif len(einfo) == 3:
-                                pevo1.append[einfo[0]]
-                                pevo2.append[einfo[1]]
-                                pevo3.append[einfo[2]]
+                                pevo1.append(einfo[0])
+                                pevo2.append(einfo[1])
+                                pevo3.append(einfo[2])
                 else:
                     if info["starter"] == "true":
                         pstart.append(info['name'])
@@ -192,12 +192,12 @@ def pokemondata():
                     for fam in info["family"]:
                         for einfo in fam["evolutionLine"]:
                             if len(einfo) == 2:
-                                pevo1.append[einfo[0]]
-                                pevo2.append[einfo[1]]
+                                pevo1.append(einfo[0])
+                                pevo2.append(einfo[1])
                             elif len(einfo) == 3:
-                                pevo1.append[einfo[0]]
-                                pevo2.append[einfo[1]]
-                                pevo3.append[einfo[2]]
+                                pevo1.append(einfo[0])
+                                pevo2.append(einfo[1])
+                                pevo3.append(einfo[2])
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
