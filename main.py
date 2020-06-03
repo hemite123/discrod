@@ -63,40 +63,37 @@ async def on_message(message):
         print(message.content)
         print(pokeserverspawntimer)
         print(pokeserverpokemonname)
-        if len(pokeserverspawntimer) == 0:
-            pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
-        else:
             index = 0
+            indexpokemon = 0
             for i in range(len(pokeserverspawntimer)):
                     if pokeserverspawntimer[i][0] == message.channel.id:
-                        servertimeno = True
                         if pokeserverspawntimer[i][1] > 0:
                             pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
                             break
                         else:
-                            if len(pokeserverpokemonname) == 0:
-                                pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
-                                print(pokeserverpokemonname[0][1])
-                                embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                await message.channel.send(embed=embed)
-                                await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
-                                break
-                            else: 
-                                for j in range(len(pokeserverpokemonname)):
-                                    if pokeserverpokemonname[j][0] == message.channel.id:
-                                        if pokeserverpokemonname[j][1] is None:
-                                            pokeserverpokemonname.append([str(message.channel.id),pokemonname[random.randrange(len(pokemonname))]])
-                                            print(pokeserverpokemonname[0][1])
-                                            embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                            await message.channel.send(embed=embed)
-                                            await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
-                                            break
+                            for j in range(len(pokeserverpokemonname)):
+                                if pokeserverpokemonname[j][0] == message.channel.id:
+                                    if pokeserverpokemonname[j][1] is None:
+                                        pokeserverpokemonname.append([str(message.channel.id),pokemonname[random.randrange(len(pokemonname))]])
+                                        print(pokeserverpokemonname[0][1])
+                                        embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                                        await message.channel.send(embed=embed)
+                                        await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
+                                        break
+                                else:
+                                    indexpokemon += 1
                     else:
                         index += 1
                         
             if index == len(pokeserverspawntimer):
-                print("test")
                 pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
+            
+            if indexpokemon == len(pokeserverpokemonname):
+                pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
+                print(pokeserverpokemonname[0][1])
+                embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                await message.channel.send(embed=embed)
+                await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
                 
                 
     await bot.process_commands(message)
