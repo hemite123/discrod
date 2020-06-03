@@ -161,22 +161,21 @@ def pokemondata():
         djson = response1.json()
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]))
         datajson = responseapi.json()
-        for info in datajson:
-            if info[0]["starter"]:
-                pstart.append(info[0]['name'])
-            elif info[0]["legendary"]:
-                plegend.append(info[0]['name'])
-            elif info[0]["mythical"]:
-                pmythical.append(info[0]['name'])
-            for fam in info[0]["family"]:
-                for einfo in fam["evolutionLine"]:
-                    if len(einfo) == 2:
-                        pevo1.append(einfo[0])
-                        pevo2.append(einfo[1])
-                    elif len(einfo) == 3:
-                        pevo1.append(einfo[0])
-                        pevo2.append(einfo[1])
-                        pevo3.append(einfo[2])
+        if datajson[0]["starter"]:
+            pstart.append(info[0]['name'])
+        elif datajson[0]["legendary"]:
+            plegend.append(info[0]['name'])
+        elif datajson[0]["mythical"]:
+            pmythical.append(info[0]['name'])
+        for fam in datajson[0]["family"]:
+            for einfo in fam["evolutionLine"]:
+                if len(einfo) == 2:
+                    pevo1.append(einfo[0])
+                    pevo2.append(einfo[1])
+                elif len(einfo) == 3:
+                    pevo1.append(einfo[0])
+                    pevo2.append(einfo[1])
+                    pevo3.append(einfo[2])
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
