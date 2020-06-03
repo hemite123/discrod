@@ -86,7 +86,7 @@ async def on_message(message):
                         for j in range(len(pokeserverpokemonname)):
                             if pokeserverpokemonname[j][0] == message.channel.id:
                                 if pokeserverpokemonname[j][1] is None:
-                                    droprate = random.randrange(0.1,100.0)
+                                    droprate = random.uniform(0.1,100.0)
                                     if droprate >= 48.9:
                                         pokename = pevo1[random.randrange(len(pevo1))]
                                     elif droprate >= 30.0:
@@ -179,8 +179,8 @@ def pokemondata():
                     pevo3.append(einfo[2])
                 else:
                     pevo1.append(einfo[0])
-        except:
-            print("error unknown data")
+        except Exception as e:
+            print(e)
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
