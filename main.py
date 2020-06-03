@@ -60,6 +60,8 @@ class Pokemon(commands.Cog):
 
 @bot.event
 async def on_message(message):
+    print(pokeserverspawntimer)
+    print(pokeserverpokemonname)
     if message.content is not None:
         print(message.content)
         index = 0
@@ -75,14 +77,13 @@ async def on_message(message):
                                 if pokeserverpokemonname[j][1] is None:
                                     pokename = pokemonname[random.randrange(len(pokemonname))]
                                     pokeserverpokemonname.append([str(message.channel.id),pokename])
-                                    requestname = "https://pokeapi.co/api/v2/pokemon/" + pokename
-                                    response = requests.get(requestname)
+                                    response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
                                     data_json = response.json()
-                                    print(pokename)
+                                    print(data_json)
                                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
                                     embed.set_image(data_json["sprites"]["front_default"])
                                     await message.channel.send(embed=embed)
-                                    await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
+                                    await message.channel.send("pokemon name " + pokename )
                                     break
                             else:
                                 indexpokemon += 1
