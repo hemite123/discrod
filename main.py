@@ -38,7 +38,6 @@ class Pokemon(commands.Cog):
         checkuser = db.CheckUser(self,author.id,"")
         for cuser in checkuser:
             if cuser[3] is None:
-                
                 db.UpdateUserPokemon(self,author.id,pokemonname)
                 embed = discord.Embed(title="Pokemon Select " + author.name,description=" Your Starter Pokemon Is " + pokemonname)
                 await ctx.send(embed=embed)
