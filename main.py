@@ -51,15 +51,13 @@ class Pokemon(commands.Cog):
         if checkuser > 0:
             for i in range(len(pokeserverpokemonname)):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
-                        print("help")
                         if pokeserverpokemonname[i][1] == pokemonname:
-                            print("hello")
                             pokeserverpokemonname[i][1] = None
                             pokeserverpokemonname[i][2] = 0 
-                            await ctx.send("<@" + author.id + "> You Got " + pokeserverpokemonname[i][1]   + "Level " + pokeserverpokemonname[i][2] )
+                            await ctx.send("<@" + str(author.id) + "> You Got " + pokeserverpokemonname[i][1]   + "Level " + pokeserverpokemonname[i][2] )
 
         else:
-            await ctx.send("<@" + author.id + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
+            await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
 
 
