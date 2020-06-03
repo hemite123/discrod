@@ -38,6 +38,7 @@ class Pokemon(commands.Cog):
         checkuser = db.CheckUser(self,author.id,"")
         for cuser in checkuser:
             if cuser[3] is None:
+                
                 db.UpdateUserPokemon(self,author.id,pokemonname)
                 embed = discord.Embed(title="Pokemon Select " + author.name,description=" Your Starter Pokemon Is " + pokemonname)
                 await ctx.send(embed=embed)
@@ -72,15 +73,15 @@ async def on_message(message):
                         break
                     else:
                          if len(pokeserverpokemonname) == 0:
-                              pokename = pokemonname[random.randrange(len(pokemonname))]
-                                pokeserverpokemonname.append([str(message.channel.id),pokename])
-                                response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
-                                data_json = response.json()
-                                embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                embed.set_image(str(data_json["sprites"]["front_default"]))
-                                await message.channel.send(embed=embed)
-                                await message.channel.send("pokemon name " + pokename )
-                                break
+                            pokename = pokemonname[random.randrange(len(pokemonname))]
+                            pokeserverpokemonname.append([str(message.channel.id),pokename])
+                            response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
+                            data_json = response.json()
+                            embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                            embed.set_image(str(data_json["sprites"]["front_default"]))
+                            await message.channel.send(embed=embed)
+                            await message.channel.send("pokemon name " + pokename )
+                            break
                          else:
                             for j in range(len(pokeserverpokemonname)):
                                 if pokeserverpokemonname[j][0] == message.channel.id:
