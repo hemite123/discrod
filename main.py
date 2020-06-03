@@ -177,6 +177,8 @@ def pokemondata():
                     pevo1.append(einfo[0])
                     pevo2.append(einfo[1])
                     pevo3.append(einfo[2])
+                else:
+                    pevo1.append(einfo[0])
         except:
             print("error unknown data")
 
