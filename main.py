@@ -154,13 +154,13 @@ async def catch(ctx,pokename):
         
 
 def pokemondata():
-     headers = 'User-Agent: BastionDiscordBot (https://bastionbot.org, v6.16.1)'
      response = requests.get("https://pokeapi.co/api/v2/pokemon?limit=964")
      data_json = response.json()
      for namepokemon in data_json['results']:
         response1 = requests.get(namepokemon["url"])
         djson = response1.json()
-        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]),headers=headers)
+        header = {'User-Agent: BastionDiscordBot (https://bastionbot.org, v6.16.1)'}
+        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]),headers=header)
         datajson = responseapi.json()
         for info in datajson:
             if len(info) > 1:
