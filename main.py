@@ -6,7 +6,13 @@ import pymysql
 import random
 
 
-pokemonname = [] 
+pstart = []
+plegend = [] 
+pmythical = []
+palolan = [] 
+pevo2 = []
+pevo3 = []
+pevo1 = []
 pokeserverspawntimer = []
 pokeserverpokemonname = []
 defaultpref = ['poke']
@@ -38,7 +44,6 @@ class Pokemon(commands.Cog):
         checkuser = db.CheckUser(self,author.id,"")
         for cuser in checkuser:
             if cuser[3] is None:
-                
                 db.UpdateUserPokemon(self,author.id,pokemonname)
                 embed = discord.Embed(title="Pokemon Select " + author.name,description=" Your Starter Pokemon Is " + pokemonname)
                 await ctx.send(embed=embed)
@@ -53,6 +58,8 @@ class Pokemon(commands.Cog):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
                         if pokeserverpokemonname[i][1] == pokemonname: 
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
+                            number = db.GetPokedex(self,author.id,"num") + 1
+                            db.InsertPokeDex(self,number,author.id,str(pokeserverpokemonname[i][2]),10)
                             pokeserverpokemonname[i][1] = None
                             pokeserverpokemonname[i][2] = 0
                             pokeserverspawntimer[i][1] = random.randrange(1,20)
@@ -66,8 +73,6 @@ class Pokemon(commands.Cog):
 
 @bot.event
 async def on_message(message):
-    print(pokeserverspawntimer)
-    print(pokeserverpokemonname)
     if message.content is not None:
         print(message.content)
         index = 0
@@ -80,7 +85,21 @@ async def on_message(message):
                         for j in range(len(pokeserverpokemonname)):
                             if pokeserverpokemonname[j][0] == message.channel.id:
                                 if pokeserverpokemonname[j][1] is None:
-                                    pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    droprate = random.randrange(0.1,100.0)
+                                    if droprate >= 39.9:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    elif droprate >= 30.0:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    elif droprate >= 17.0:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    elif droprate >= 7.0:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    elif droprate >= 5.0:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    elif droprate >= 1.0:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    elif droprate >= 0.1:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
                                     pokeserverpokemonname[j][1] = pokename
                                     pokeserverpokemonname[j][2] = random.randrange(1,50)
                                     response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
@@ -89,7 +108,7 @@ async def on_message(message):
                                     if data_json["sprites"]["front_default"] is not None:
                                         embed.set_image(url=data_json["sprites"]["front_default"])
                                     await message.channel.send(embed=embed)
-                                    await message.channel.send("pokemon name " + pokename )
+                                    print(f"Pokemon {pokename} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
                                     break
                             
                 else:
@@ -136,12 +155,51 @@ async def catch(ctx,pokename):
         
 
 def pokemondata():
+     headers = {'User-Agent: BastionDiscordBot (https://bastionbot.org, v6.16.1)'}
      response = requests.get("https://pokeapi.co/api/v2/pokemon?limit=964")
-     data_json = response.json()
+     data_json = responseapi.json()
      for namepokemon in data_json['results']:
-         pokemonname.append(namepokemon['name'])
+        response1 = requests.get(namepokemon["url"])
+        djson = response1.json()
+        for pokeid in djson:
+            responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/"+pokeid["id"],headers=headers)
+            datajson = responseapi.json()
+            for info in datajson:
+                if len(info) > 1:
+                    if info[0]["starter"] == "true":
+                        pstart.append(info[0]['name'])
+                    elif info[0]["legendary"] == "true":
+                        plegend.append(info[0]['name'])
+                    elif info[0]["mythical"] == "true":
+                        pmythical.append(info[0]['name'])
+                    elif info[1]["name"] = "Alolan " + info[0]["name"]:
+                        palolan.append(info[1]["name"])
+                    for fam in info["family"]:
+                        for einfo in fam["evolutionLine"]:
+                            if len(einfo) == 2:
+                                pevo1.append[einfo[0]]
+                                pevo2.append[einfo[1]]
+                            elif len(einfo) == 3:
+                                pevo1.append[einfo[0]]
+                                pevo2.append[einfo[1]]
+                                pevo3.append[einfo[2]]
+                else:
+                    if info["starter"] == "true":
+                        pstart.append(info['name'])
+                    elif info["legendary"] == "true":
+                        plegend.append(info['name'])
+                    elif info["mythical"] == "true":
+                        pmythical.append(info['name'])
+                    for fam in info["family"]:
+                        for einfo in fam["evolutionLine"]:
+                            if len(einfo) == 2:
+                                pevo1.append[einfo[0]]
+                                pevo2.append[einfo[1]]
+                            elif len(einfo) == 3:
+                                pevo1.append[einfo[0]]
+                                pevo2.append[einfo[1]]
+                                pevo3.append[einfo[2]]
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
-
