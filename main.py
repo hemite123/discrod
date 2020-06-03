@@ -155,8 +155,8 @@ async def catch(ctx,pokename):
 
 def pokemondata():
     r1 = requests.get("https://pokeapi.glitch.me/v1/pokemon/counts")
-    print(r1)
-    count = r1["total"]
+    request = r1.json()
+    count = request["total"]
     for i in range(count):
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i))
         datajson = responseapi.json()
