@@ -77,9 +77,8 @@ async def on_message(message):
                             pokeserverpokemonname.append([str(message.channel.id),pokename])
                             response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
                             data_json = response.json()
-                            print(data_json["sprites"]["front_default"])
                             embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                            embed.set_image(str(data_json["sprites"]["front_default"]))
+                            embed.set_image(url=data_json["sprites"]["front_default"])
                             await message.channel.send(embed=embed)
                             await message.channel.send("pokemon name " + pokename )
                             break
@@ -91,9 +90,8 @@ async def on_message(message):
                                         pokeserverpokemonname.append([str(message.channel.id),pokename])
                                         response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
                                         data_json = response.json()
-                                        print(data_json["sprites"]["front_default"])
                                         embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                        embed.set_image(str(data_json["sprites"]["front_default"]))
+                                        embed.set_image(url=data_json["sprites"]["front_default"])
                                         await message.channel.send(embed=embed)
                                         await message.channel.send("pokemon name " + pokename )
                                         break
