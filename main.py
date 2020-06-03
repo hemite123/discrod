@@ -180,7 +180,22 @@ def pokemondata():
                 else:
                     pevo1.append(einfo[0])
         except Exception as e:
-            print(e)
+            responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i))
+            datajson1 = responseapi.json()
+            if datajson[0]["starter"]:
+                pstart.append(datajson[0]['name'])
+            elif datajson[0]["legendary"]:
+                plegend.append(datajson[0]['name'])
+            elif datajson[0]["mythical"]:
+                pmythical.append(datajson[0]['name'])
+            for einfo in datajson[0]["family"]["evolutionLine"]:
+                if len(einfo) == 2:
+                    pevo1.append(einfo[0])
+                    pevo2.append(einfo[1])
+                elif len(einfo) == 3:
+                    pevo1.append(einfo[0])
+                    pevo2.append(einfo[1])
+                    pevo3.append(einfo[2])
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
