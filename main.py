@@ -159,7 +159,7 @@ def pokemondata():
     count = request["total"]
     for i in range(1,count):
         print(i)
-        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i) , headers={"User-Agent: BastionDiscordBot (https://bastionbot.org, v6.16.1)"})
+        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i) , headers={"User-Agent": "BastionDiscordBot (https://bastionbot.org, v6.16.1)"})
         datajson = responseapi.json()
         try:
             print(datajson[0]["name"])
