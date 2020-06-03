@@ -172,7 +172,7 @@ def pokemondata():
                     pmythical.append(info[0]['name'])
                 elif info[1]["name"] == "Alolan " + info[0]["name"]:
                     palolan.append(info[1]["name"])
-                for fam in info["family"]:
+                for fam in info[0]["family"]:
                     for einfo in fam["evolutionLine"]:
                         if len(einfo) == 2:
                             pevo1.append(einfo[0])
@@ -182,13 +182,13 @@ def pokemondata():
                             pevo2.append(einfo[1])
                             pevo3.append(einfo[2])
             else:
-                if info["starter"] == True:
-                    pstart.append(info['name'])
-                elif info["legendary"] == True:
-                    plegend.append(info['name'])
-                elif info["mythical"] == True:
-                    pmythical.append(info['name'])
-                for fam in info["family"]:
+                if info[0]["starter"] == True:
+                    pstart.append(info[0]['name'])
+                elif info[0]["legendary"] == True:
+                    plegend.append(info[0]['name'])
+                elif info[0]["mythical"] == True:
+                    pmythical.append(info[0]['name'])
+                for fam in info[0]["family"]:
                     for einfo in fam["evolutionLine"]:
                         if len(einfo) == 2:
                             pevo1.append(einfo[0])
