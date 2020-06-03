@@ -102,6 +102,7 @@ async def on_message(message):
                                         await message.channel.send("pokemon name " + pokename )
                                         return
                                 else:
+                                    indexpokemon += 1
                                     if indexpokemon == len(pokeserverpokemonname):
                                         pokename = pokemonname[random.randrange(len(pokemonname))]
                                         pokeserverpokemonname.append([str(message.channel.id),pokename,random.randrange(1,50)])
@@ -113,8 +114,6 @@ async def on_message(message):
                                         await message.channel.send(embed=embed)
                                         await message.channel.send("pokemon name " + pokename )
                                         return
-                                    else:
-                                        indexpokemon += 1
                             
                 else:
                     index += 1
