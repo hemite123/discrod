@@ -56,6 +56,8 @@ class Pokemon(commands.Cog):
                             pokeserverpokemonname[i][1] = None
                             pokeserverpokemonname[i][2] = 0
                             pokeserverspawntimer[i][1] = random.randrange(1,20)
+                        else:
+                             await ctx.send("<@" + str(author.id) + "> Wrong Pokemon Name Try Another Name") 
 
         else:
             await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
