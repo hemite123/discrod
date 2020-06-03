@@ -4,6 +4,7 @@ import requests
 import db
 import pymysql
 import random
+import google_images_search
 
 pokemonname = [] 
 pokeserverspawntimer = []
@@ -63,37 +64,37 @@ async def on_message(message):
         print(message.content)
         print(pokeserverspawntimer)
         print(pokeserverpokemonname)
-            index = 0
-            indexpokemon = 0
-            for i in range(len(pokeserverspawntimer)):
-                    if pokeserverspawntimer[i][0] == message.channel.id:
-                        if pokeserverspawntimer[i][1] > 0:
-                            pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
-                            break
-                        else:
-                            for j in range(len(pokeserverpokemonname)):
-                                if pokeserverpokemonname[j][0] == message.channel.id:
-                                    if pokeserverpokemonname[j][1] is None:
-                                        pokeserverpokemonname.append([str(message.channel.id),pokemonname[random.randrange(len(pokemonname))]])
-                                        print(pokeserverpokemonname[0][1])
-                                        embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                        await message.channel.send(embed=embed)
-                                        await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
-                                        break
-                                else:
-                                    indexpokemon += 1
+        index = 0
+        indexpokemon = 0
+        for i in range(len(pokeserverspawntimer)):
+                if pokeserverspawntimer[i][0] == message.channel.id:
+                    if pokeserverspawntimer[i][1] > 0:
+                        pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
+                        break
                     else:
-                        index += 1
+                        for j in range(len(pokeserverpokemonname)):
+                            if pokeserverpokemonname[j][0] == message.channel.id:
+                                if pokeserverpokemonname[j][1] is None:
+                                    pokeserverpokemonname.append([str(message.channel.id),pokemonname[random.randrange(len(pokemonname))]])
+                                    print(pokeserverpokemonname[0][1])
+                                    embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                                    await message.channel.send(embed=embed)
+                                    await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
+                                    break
+                            else:
+                                indexpokemon += 1
+                else:
+                    index += 1
                         
-            if index == len(pokeserverspawntimer):
-                pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
+        if index == len(pokeserverspawntimer):
+            pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
             
-            if indexpokemon == len(pokeserverpokemonname):
-                pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
-                print(pokeserverpokemonname[0][1])
-                embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                await message.channel.send(embed=embed)
-                await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
+        if indexpokemon == len(pokeserverpokemonname):
+            pokeserverpokemonname.append([message.channel.id,pokemonname[random.randrange(len(pokemonname))]])
+            print(pokeserverpokemonname[0][1])
+            embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+            await message.channel.send(embed=embed)
+            await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
                 
                 
     await bot.process_commands(message)
