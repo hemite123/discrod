@@ -29,5 +29,22 @@ def UpdateUserPokemon(self,id,pokename):
     updateData = "UPDATE user SET pokestart='"+str(pokename)+"'WHERE user_id=" + str(id)
     cursor.execute(updateData)
     connection.commit()
+
+def GetPokedex(self,id):
+    getpokedex = "SELECT * FROM pokedex WHERE user_id=" + str(id)
+    cursor.execute(getpokedex)
+    rows = cursor.fetchall()
+    return rows
+    connection.commit()
+
+def InsertPokeDex(self,number, id,pokemonname,price):
+    inserq = f"INSERT INTO pokedex(number,user_id,pokemonname,price,claim) VALUES({number},{str(id)},{str(pokemonname)},{price},0);"
+    cursor.execute(inserq)
+    connection.commit()
+
+def InsertListPokemon(self,number,id,pokemonname,level):
+    inserq = f"INSERT INTO listpokemon(number,user_id,pokemonname,level,curexp,stat) VALUES({number},{str(id)},{str(pokemonname)},{level},0,{level});"
+    cursor.execute(inserq)
+    connection.commit()
     
 
