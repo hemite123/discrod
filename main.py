@@ -65,6 +65,7 @@ class Pokemon(commands.Cog):
                             pokeserverspawntimer[i][1] = random.randrange(1,20)
                         else:
                              await ctx.send("<@" + str(author.id) + "> Wrong Pokemon Name Try Another Name") 
+                             
 
         else:
             await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
@@ -86,20 +87,18 @@ async def on_message(message):
                             if pokeserverpokemonname[j][0] == message.channel.id:
                                 if pokeserverpokemonname[j][1] is None:
                                     droprate = random.randrange(0.1,100.0)
-                                    if droprate >= 39.9:
-                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                    if droprate >= 48.9:
+                                        pokename = pevo1[random.randrange(len(pevo1))]
                                     elif droprate >= 30.0:
-                                        pokename = pokemonname[random.randrange(len(pokemonname))]
-                                    elif droprate >= 17.0:
-                                        pokename = pokemonname[random.randrange(len(pokemonname))]
-                                    elif droprate >= 7.0:
-                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                        pokename = pevo2[random.randrange(len(pevo2))]
+                                    elif droprate >= 15.0:
+                                        pokename = pevo3[random.randrange(len(pevo3))]
                                     elif droprate >= 5.0:
-                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                        pokename = palolan[random.randrange(len(palolan))]
                                     elif droprate >= 1.0:
-                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                        pokename = pmythical[random.randrange(len(pmythical))]
                                     elif droprate >= 0.1:
-                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                        pokename = plegend[random.randrange(len(plegend))]
                                     pokeserverpokemonname[j][1] = pokename
                                     pokeserverpokemonname[j][2] = random.randrange(1,50)
                                     response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
