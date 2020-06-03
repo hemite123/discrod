@@ -180,7 +180,7 @@ def pokemondata():
                     pevo3.append(einfo[2])
                 else:
                     pevo1.append(einfo[0])
-            time.sleep(5)
+            time.sleep(2)
         except Exception as e:
            print("ERROR")
 pokemondata()
