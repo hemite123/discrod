@@ -84,9 +84,9 @@ async def on_message(message):
                                             embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
                                             await message.channel.send(embed=embed)
                                             await message.channel.send("pokemon name " + pokeserverpokemonname[0][1] )
-                    elif not any(message.channel.id in x for x in pokeserverspawntimer):
-                        print("test")
-                        pokeserverspawntimer.append((str(message.channel.id),random.randrange(1,20)))
+            if not any(message.channel.id in x for x in pokeserverspawntimer):
+                    print("test")
+                    pokeserverspawntimer.append((str(message.channel.id),random.randrange(1,20)))
                 
     await bot.process_commands(message)
 
