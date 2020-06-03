@@ -79,9 +79,10 @@ async def on_message(message):
                                     pokeserverpokemonname.append([str(message.channel.id),pokename])
                                     response = requests.get("https://pokeapi.co/api/v2/pokemon/"+pokename)
                                     data_json = response.json()
+                                    print(data_json)
                                     for namepokemon in data_json['sprites']:
                                         print(namepokemon['front_default'])
-                                    print(pokeserverpokemonname[0][1])
+                                    print(pokeserverpokemonname[j][1])
                                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
                                     embed.set_image()
                                     await message.channel.send(embed=embed)
