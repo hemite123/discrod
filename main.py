@@ -162,8 +162,8 @@ def pokemondata():
         print(djson["id"])
         responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(djson["id"]))
         datajson = responseapi.json()
-        print(datajson[0]["name"])
         try:
+            print(datajson[0]["name"])
             if datajson[0]["starter"]:
                 pstart.append(datajson[0]['name'])
             elif datajson[0]["legendary"]:
