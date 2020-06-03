@@ -79,7 +79,8 @@ async def on_message(message):
                             if pokeserverpokemonname[j][0] == message.channel.id:
                                 if pokeserverpokemonname[j][1] is None:
                                     pokename = pokemonname[random.randrange(len(pokemonname))]
-                                    pokeserverpokemonname.append([str(message.channel.id),pokename,random.randrange(1,50)])
+                                    pokeserverpokemonname[j][1] = pokename
+                                    pokeserverpokemonname[j][2] = random.randrange(1,50)
                                     response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
                                     data_json = response.json()
                                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
@@ -94,7 +95,7 @@ async def on_message(message):
                         
         if index == len(pokeserverspawntimer):
             pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
-            pokeserverpokemonname.append([message.channel.id,None])
+            pokeserverpokemonname.append([message.channel.id,None,0])
             index = 0
 
         
