@@ -101,11 +101,11 @@ async def on_message(message):
                                         pokename = plegend[random.randrange(len(plegend))]
                                     pokeserverpokemonname[j][1] = pokename
                                     pokeserverpokemonname[j][2] = random.randrange(1,50)
-                                    response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
+                                    response = requests.get(f"https://pokeapi.glitch.me/v1/pokemon/{pokename}")
                                     data_json = response.json()
                                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                    if data_json["sprites"]["front_default"] is not None:
-                                        embed.set_image(url=data_json["sprites"]["front_default"])
+                                    if data_json["sprite"] is not None:
+                                        embed.set_image(url=data_json["sprite"])
                                     await message.channel.send(embed=embed)
                                     print(f"Pokemon {pokename} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
                                     break
