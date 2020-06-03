@@ -52,6 +52,7 @@ class Pokemon(commands.Cog):
             for i in range(len(pokeserverpokemonname)):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
                         if pokeserverpokemonname[i][1] == pokemonname:
+                            print("hello")
                             pokeserverpokemonname[i][1] = None
                             pokeserverpokemonname[i][2] = 0 
                             await ctx.send("<@" + author.id + "> You Got " + pokeserverpokemonname[i][1]   + "Level " + pokeserverpokemonname[i][2] )
@@ -110,18 +111,6 @@ async def on_message(message):
         if index == len(pokeserverspawntimer):
             pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
             return
-        
-        if indexpokemon == len(pokeserverpokemonname):
-            pokename = pokemonname[random.randrange(len(pokemonname))]
-            pokeserverpokemonname.append([str(message.channel.id),pokename,random.randrange(1,50)])
-            response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
-            data_json = response.json()
-            embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-            if data_json["sprites"]["front_default"] is not None:
-                embed.set_image(url=data_json["sprites"]["front_default"])
-            await message.channel.send(embed=embed)
-            await message.channel.send("pokemon name " + pokename )
-           
                 
                 
                 
