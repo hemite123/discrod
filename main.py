@@ -69,7 +69,6 @@ async def on_message(message):
     if message.content is not None:
         print(message.content)
         index = 0
-        indexpokemon = 0
         for i in range(len(pokeserverspawntimer)):
                 if pokeserverspawntimer[i][0] == message.channel.id:
                     if pokeserverspawntimer[i][1] > 0:
@@ -88,7 +87,7 @@ async def on_message(message):
                                         embed.set_image(url=data_json["sprites"]["front_default"])
                                     await message.channel.send(embed=embed)
                                     await message.channel.send("pokemon name " + pokename )
-                                    return
+                                    break
                             
                 else:
                     index += 1
