@@ -4,7 +4,7 @@ import requests
 import db
 import pymysql
 import random
-import google_images_search
+
 
 pokemonname = [] 
 pokeserverspawntimer = []
