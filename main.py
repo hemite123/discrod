@@ -54,7 +54,7 @@ class Pokemon(commands.Cog):
                         if pokeserverpokemonname[i][1] == pokemonname:
                             pokeserverpokemonname[i][1] = None
                             pokeserverpokemonname[i][2] = 0 
-                            await ctx.send("<@" + str(author.id) + "> You Got " + pokeserverpokemonname[i][1]   + "Level " + pokeserverpokemonname[i][2] )
+                            await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + "Level " + str(pokeserverpokemonname[i][2]) )
 
         else:
             await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
