@@ -164,11 +164,11 @@ def pokemondata():
         print(datajson[0]["starter"])
         for info in datajson:
             if len(info) > 1:
-                if info[0]["starter"] == True:
+                if info[0]["starter"]:
                     pstart.append(info[0]['name'])
-                elif info[0]["legendary"] == True:
+                elif info[0]["legendary"]:
                     plegend.append(info[0]['name'])
-                elif info[0]["mythical"] == True:
+                elif info[0]["mythical"]:
                     pmythical.append(info[0]['name'])
                 elif info[1]["name"] == "Alolan " + info[0]["name"]:
                     palolan.append(info[1]["name"])
@@ -182,11 +182,11 @@ def pokemondata():
                             pevo2.append(einfo[1])
                             pevo3.append(einfo[2])
             else:
-                if info[0]["starter"] == True:
+                if info[0]["starter"]:
                     pstart.append(info[0]['name'])
-                elif info[0]["legendary"] == True:
+                elif info[0]["legendary"]:
                     plegend.append(info[0]['name'])
-                elif info[0]["mythical"] == True:
+                elif info[0]["mythical"]:
                     pmythical.append(info[0]['name'])
                 for fam in info[0]["family"]:
                     for einfo in fam["evolutionLine"]:
