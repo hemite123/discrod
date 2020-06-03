@@ -51,6 +51,7 @@ class Pokemon(commands.Cog):
         if checkuser > 0:
             for i in range(len(pokeserverpokemonname)):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
+                        print("help")
                         if pokeserverpokemonname[i][1] == pokemonname:
                             print("hello")
                             pokeserverpokemonname[i][1] = None
