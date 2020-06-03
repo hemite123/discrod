@@ -72,9 +72,7 @@ async def on_message(message):
                         pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
                         break
                     else:
-                        for j in range(len(pokeserverpokemonname)):
-                            if pokeserverpokemonname[j][0] == message.channel.id:
-                                if pokeserverpokemonname[j][1] is None:
+                         if len(pokeserverpokemonname) == 0:
                                     pokename = pokemonname[random.randrange(len(pokemonname))]
                                     pokeserverpokemonname.append([str(message.channel.id),pokename])
                                     response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
@@ -84,10 +82,12 @@ async def on_message(message):
                                     await message.channel.send(embed=embed)
                                     await message.channel.send("pokemon name " + pokename )
                                     break
-                            else:
-                                if len(pokeserverpokemonname) == 0:
-                                    pokename = pokemonname[random.randrange(len(pokemonname))]
-                                    pokeserverpokemonname.append([str(message.channel.id),pokename])
+                         else:
+                            for j in range(len(pokeserverpokemonname)):
+                                if pokeserverpokemonname[j][0] == message.channel.id:
+                                    if pokeserverpokemonname[j][1] is None:
+                                        pokename = pokemonname[random.randrange(len(pokemonname))]
+                                        pokeserverpokemonname.append([str(message.channel.id),pokename])
                                     response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokename}")
                                     data_json = response.json()
                                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
@@ -95,6 +95,7 @@ async def on_message(message):
                                     await message.channel.send(embed=embed)
                                     await message.channel.send("pokemon name " + pokename )
                                     break
+                            
                 else:
                     index += 1
                         
