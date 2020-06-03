@@ -65,7 +65,7 @@ class Pokemon(commands.Cog):
                             pokeserverspawntimer[i][1] = random.randrange(1,20)
                         else:
                              await ctx.send("<@" + str(author.id) + "> Wrong Pokemon Name Try Another Name") 
-                             
+
 
         else:
             await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
@@ -171,7 +171,7 @@ def pokemondata():
                         plegend.append(info[0]['name'])
                     elif info[0]["mythical"] == "true":
                         pmythical.append(info[0]['name'])
-                    elif info[1]["name"] = "Alolan " + info[0]["name"]:
+                    elif info[1]["name"] == "Alolan " + info[0]["name"]:
                         palolan.append(info[1]["name"])
                     for fam in info["family"]:
                         for einfo in fam["evolutionLine"]:
