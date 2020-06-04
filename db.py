@@ -12,12 +12,10 @@ def InputUser(self,id,name):
     senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata",data=data,headers={"Content-Type":"application/json"})
 
 def CheckUser(self,id,act):
-    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/"+str(id),headers={"Content-Type":"application/json"})
-    print(getdata)
+    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id),headers={"Content-Type":"application/json"})
     response = getdata.json()
-    print(response)
     if act == "rcount":
-        return len(response)
+        return len(response["data"])
     else:
         return response
 
