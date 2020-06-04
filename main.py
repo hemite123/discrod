@@ -103,11 +103,12 @@ async def on_message(message):
                                         pokename = plegend[random.randrange(len(plegend))]
                                     pokeserverpokemonname[j][1] = pokename
                                     pokeserverpokemonname[j][2] = random.randrange(1,50)
-                                    response = requests.get(f"https://pokeapi.glitch.me/v1/pokemon/{pokename}")
-                                    data_json = response.json()
                                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                    if data_json["sprite"] is not None:
-                                        embed.set_image(url=data_json["sprite"])
+                                    with open("pokemon.json") as pokedb:
+                                        dataload = json.load(pokedb)
+                                    for i in range(len(dataload)):
+                                        if dataload[i]["name"] == pokename:
+                                            embed.set_image(url=data_json[i]["sprite"])
                                     await message.channel.send(embed=embed)
                                     print(f"Pokemon {pokename} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
                                     break
@@ -158,7 +159,29 @@ async def catch(ctx,pokename):
 def pokemondata():
     with open("pokemon.json") as pokedb:
         dataload = json.load(pokedb)
-        print(dataload[0]["name"])
+        for i in range(len(dataload)):
+            if dataload[i]["starter"]:
+                pstart.append(dataload[i]["name"])
+                return
+            elif dataload[i]["legendary"]:
+                plegend.append(dataload[i]["name"])
+                return
+            elif dataload[i]["mythical"]:
+                pmythical.append(dataload[i]["name"])
+                return
+            elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
+                palolan.append(dataload[i]["name"])
+                return
+            elif dataload[i]["family"][0]["evolutionStage"] == 1:
+                pevo1.append(dataload[i]["name"])
+                return
+            elif dataload[i]["family"][0]["evolutionStage"] == 2:
+                pevo2.append(dataload[i]["name"])
+                return
+            elif dataload[i]["family"][0]["evolutionStage"] == 3:
+                pevo3.append(dataload[i]["name"])
+                return
+            
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
