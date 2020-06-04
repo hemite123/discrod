@@ -15,7 +15,7 @@ def CheckUser(self,id,act):
     getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id),headers={"Content-Type":"application/json"})
     response = getdata.json()
     if act == "rcount":
-        return len(response["data"])
+        return response["data"]
     else:
         return response
 
