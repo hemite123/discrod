@@ -5,10 +5,8 @@ import os
 for i in range(1,500):
     response = requests.get("https://pokeapi.glitch.me/v1/pokemon/"+str(i))
     data = response.json()
-    print(data)
     filepath = 'pokemon.json'
     print(i)
-    print(os.stat(filepath).st_size)
 
     try:
         if os.stat(filepath).st_size == 1:
