@@ -9,11 +9,13 @@ def GetBalance(self, id):
     return balance
 def InputUser(self,id,name):
     data = {"user_id":id,"name":name,"balance":0,"datapost":"insert"}
-    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata",data=data,headers={"Content-Type":"application/json"})
-
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata",data=data,headers={"Content-Type":"application/json","Content-Type" : "x-www-form-urlencoded"})
+    
+    
 def CheckUser(self,id,act):
-    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id),headers={"Content-Type":"application/json","Content-Type" : "x-www-form-urlencoded"})
+    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id),headers={"Content-Type":"application/json"})
     response = getdata.json()
+    print(response)
     if act == "rcount":
         return response["data"]
     else:
