@@ -15,6 +15,7 @@ for i in range(1,500):
         else:
             with open('pokemon.json') as f:
                 jsonload = json.load(f)
+            print(jsonload)
             jsonload.append(data)
     
             with open('pokemon.json','w') as d:
