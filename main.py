@@ -160,6 +160,7 @@ def pokemondata():
     with open("pokemon.json") as pokedb:
         dataload = json.load(pokedb)
         for i in range(len(dataload)):
+            print(dataload[i]["name"])
             if dataload[i]["starter"]:
                 pstart.append(dataload[i]["name"])
                 return
@@ -181,6 +182,7 @@ def pokemondata():
             elif dataload[i]["family"][0]["evolutionStage"] == 3:
                 pevo3.append(dataload[i]["name"])
                 return
+           
             
 
 pokemondata()
