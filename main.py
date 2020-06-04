@@ -158,7 +158,7 @@ async def catch(ctx,pokename):
 def pokemondata():
     with open("pokemon.json") as pokedb:
         dataload = json.load(pokedb)
-        print(dataload[0][1])
+        print(dataload[0]["name"])
 
 pokemondata()
 bot.add_cog(Pokemon(bot))
