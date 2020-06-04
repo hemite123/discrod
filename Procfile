@@ -1,1 +1,1 @@
-worker: python getdata.py
+worker: python main.py
