@@ -163,25 +163,19 @@ def pokemondata():
             print(dataload[i]["name"])
             if dataload[i]["starter"]:
                 pstart.append(dataload[i]["name"])
-                return
             elif dataload[i]["legendary"]:
-                plegend.append(dataload[i]["name"])
-                return
+                plegend.append(dataload[i]["name"]) 
             elif dataload[i]["mythical"]:
-                pmythical.append(dataload[i]["name"])
-                return
+                pmythical.append(dataload[i]["name"])       
             elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
-                palolan.append(dataload[i]["name"])
-                return
+                palolan.append(dataload[i]["name"]) 
             elif dataload[i]["family"][0]["evolutionStage"] == 1:
-                pevo1.append(dataload[i]["name"])
-                return
+                pevo1.append(dataload[i]["name"])      
             elif dataload[i]["family"][0]["evolutionStage"] == 2:
                 pevo2.append(dataload[i]["name"])
-                return
             elif dataload[i]["family"][0]["evolutionStage"] == 3:
                 pevo3.append(dataload[i]["name"])
-                return
+            
            
             
 
