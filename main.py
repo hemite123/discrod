@@ -184,5 +184,12 @@ def pokemondata():
             
 
 pokemondata()
+print(pmythical)
+print(palolan)
+print(pevo1)
+print(pevo2)
+print(pevo3)
+print(plegend)
+print(pstart)
 bot.add_cog(Pokemon(bot))
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
