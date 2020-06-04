@@ -7,6 +7,7 @@ for i in range(1,500):
     data = response.json()
     filepath = 'pokemon.json'
     print(i)
+    print(os.stat(filepath).st.size)
 
     try:
         if os.stat(filepath).st_size == 0:
