@@ -155,31 +155,10 @@ async def catch(ctx,pokename):
         
 
 def pokemondata():
-    r1 = requests.get("https://pokeapi.glitch.me/v1/pokemon/counts")
-    request = r1.json()
-    count = request["total"]
-    for i in range(1,count):
-        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i) , headers={"User-Agent": "BastionDiscordBot (https://bastionbot.org, v6.16.1)"})
-        datajson = responseapi.json()
-        try:
-            if datajson[0]["starter"]:
-                pstart.append(datajson[0]['name'])
-            elif datajson[0]["legendary"]:
-                plegend.append(datajson[0]['name'])
-            elif datajson[0]["mythical"]:
-                pmythical.append(datajson[0]['name'])
-            for einfo in datajson[0]["family"]["evolutionLine"]:
-                if len(einfo) == 2:
-                    pevo1.append(einfo[0])
-                    pevo2.append(einfo[1])
-                elif len(einfo) == 3:
-                    pevo1.append(einfo[0])
-                    pevo2.append(einfo[1])
-                    pevo3.append(einfo[2])
-                else:
-                    pevo1.append(einfo[0])
-        except Exception as e:
-           print("ERROR")
+    with open("pokemon.json") as pokedb:
+        dataload = json.load(pokedb)
+        print(dataload[0][1])
+
 pokemondata()
 bot.add_cog(Pokemon(bot))
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
