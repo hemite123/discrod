@@ -25631,7 +25631,6 @@
          "sprite":"https://cdn.traction.one/pokedex/pokemon/498.png",
          "description":"It can deftly dodge its foe\u2019s attacks while shooting fireballs from its nose. It roasts berries before it eats them."
       },
-   [
    {
       "number":"499",
       "name":"Pignite",
@@ -40088,6 +40087,6 @@
       "sprite":"https://cdn.traction.one/pokedex/pokemon/807.png",
       "description":"It electrifies its claws and tears its opponents apart with them. Even if they dodge its attack, they\u2019ll be electrocuted by the flying sparks."
    }
-]
+
    
 ]
