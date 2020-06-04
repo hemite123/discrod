@@ -13,8 +13,8 @@ def InputUser(self,id,name):
 
 def CheckUser(self,id,act):
     getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/"+str(id),headers={"Content-Type":"application/json"})
-    print(getdata)
     response = getdata.json()
+    print(response)
     if act == "rcount":
         return len(response)
     else:
