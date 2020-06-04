@@ -108,7 +108,7 @@ async def on_message(message):
                                         dataload = json.load(pokedb)
                                     for i in range(len(dataload)):
                                         if dataload[i]["name"] == pokename:
-                                            embed.set_image(url=data_json[i]["sprite"])
+                                            embed.set_image(url=dataload[i]["sprite"])
                                     await message.channel.send(embed=embed)
                                     print(f"Pokemon {pokename} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
                                     break
@@ -180,12 +180,5 @@ def pokemondata():
             
 
 pokemondata()
-print(pmythical)
-print(palolan)
-print(pevo1)
-print(pevo2)
-print(pevo3)
-print(plegend)
-print(pstart)
 bot.add_cog(Pokemon(bot))
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
