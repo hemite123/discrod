@@ -10,7 +10,7 @@ for i in range(1,500):
     print(os.stat(filepath).st_size)
 
     try:
-        if os.stat(filepath).st_size == 0:
+        if os.stat(filepath).st_size == 1:
             with open('pokemon.json','w') as d:
                 json.dump(data,d)   
         else:
