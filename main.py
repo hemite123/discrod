@@ -169,11 +169,11 @@ def pokemondata():
                 pmythical.append(dataload[i]["name"])       
             elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
                 palolan.append(dataload[i]["name"]) 
-            elif dataload[i]["family"][0]["evolutionStage"] == 1:
+            elif dataload[i]["family"]["evolutionStage"] == 1:
                 pevo1.append(dataload[i]["name"])      
-            elif dataload[i]["family"][0]["evolutionStage"] == 2:
+            elif dataload[i]["family"]["evolutionStage"] == 2:
                 pevo2.append(dataload[i]["name"])
-            elif dataload[i]["family"][0]["evolutionStage"] == 3:
+            elif dataload[i]["family"]["evolutionStage"] == 3:
                 pevo3.append(dataload[i]["name"])
             
            
