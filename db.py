@@ -3,7 +3,7 @@ import json
 
 
 def GetBalance(self, id):
-    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/"+str(id),headers={"Content-Type":"application/json"})
+    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id),headers={"Content-Type":"application/json"})
     response = getdata.json()
     balance = response["balance"]
     return balance
