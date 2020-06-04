@@ -9,7 +9,7 @@ def GetBalance(self, id):
     return balance
 def InputUser(self,id,name):
     data = {"user_id":id,"name":name,"balance":0,"datapost":"insert"}
-    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",data=data,headers={"Content-Type":"application/json","Content-Type" : "x-www-form-urlencoded"})
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json=data,headers={"Content-Type":"application/json","Content-Type" : "x-www-form-urlencoded"})
     print(senddata.text)
     
 def CheckUser(self,id,act):
@@ -23,6 +23,6 @@ def CheckUser(self,id,act):
 
 def UpdateUserPokemon(self,id,pokename):
     data = {"user_id":id,"pokestart":pokename,"datapost":"update"}
-    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",data=data,headers={"Content-Type":"application/json"})
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json=data,headers={"Content-Type":"application/json"})
     
 
