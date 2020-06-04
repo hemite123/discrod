@@ -173,7 +173,7 @@ def pokemondata():
                 pevo1.append(dataload[i]["name"])      
             elif dataload[i]["family"]["evolutionStage"] == 2:
                 pevo2.append(dataload[i]["name"])
-            elif dataload[i]["family"]["evolutionStage"] == 3:
+           elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
                 pevo3.append(dataload[i]["name"])
             
            
