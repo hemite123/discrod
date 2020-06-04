@@ -89,15 +89,15 @@ async def on_message(message):
                             if pokeserverpokemonname[j][0] == message.channel.id:
                                 if pokeserverpokemonname[j][1] is None:
                                     droprate = random.uniform(0.1,100.0)
-                                    if droprate >= 48.9:
+                                    if droprate >= 48.9 or droprate <= 48.9:
                                         pokename = pevo1[random.randrange(len(pevo1))]
-                                    elif droprate >= 30.0:
+                                    elif droprate <= 30.0:
                                         pokename = pevo2[random.randrange(len(pevo2))]
-                                    elif droprate >= 15.0:
+                                    elif droprate <= 15.0:
                                         pokename = pevo3[random.randrange(len(pevo3))]
-                                    elif droprate >= 5.0:
+                                    elif droprate <= 5.0:
                                         pokename = palolan[random.randrange(len(palolan))]
-                                    elif droprate >= 1.0:
+                                    elif droprate <= 1.0:
                                         pokename = pmythical[random.randrange(len(pmythical))]
                                     elif droprate >= 0.1:
                                         pokename = plegend[random.randrange(len(plegend))]
@@ -173,7 +173,7 @@ def pokemondata():
                 pevo1.append(dataload[i]["name"])      
             elif dataload[i]["family"]["evolutionStage"] == 2:
                 pevo2.append(dataload[i]["name"])
-           elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
+            elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
                 pevo3.append(dataload[i]["name"])
             
            
