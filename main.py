@@ -85,7 +85,7 @@ class Pokemon(commands.Cog):
         string = ""
         print(len(userpokemon))
         for i in range(len(userpokemon)):
-            string = string + "/n "+userpokemon[i]["pokemonname"] +"level : "+ userpokemon[i]["level"] + "Number " + userpokemon[i]["nomor"]
+            string = string + "\n "+userpokemon[i]["pokemonname"] +"level : "+ userpokemon[i]["level"] + "Number " + userpokemon[i]["nomor"]
         embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
         embed.add_field(name="Pokemon Data",value=string)
         await ctx.send(embed=embed)
