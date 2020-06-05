@@ -119,7 +119,7 @@ async def on_message(message):
                         for i in range (len(dataload)):
                             if str(dataload[i]["level"]) == str(data["level"]):
                                 if int(exp) > int(dataload[i]["exp"]):
-                                    level = level + 1
+                                    level = int(level) + 1
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                     await message.channel.send(embed=embed)
@@ -136,7 +136,7 @@ async def on_message(message):
                         for i in range (len(dataload)):
                             if str(dataload[i]["level"]) == str(data["level"]):
                                if int(exp) > int(dataload[i]["exp"]):
-                                    level = level + 1
+                                    level = int(level) + 1
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                     await message.channel.send(embed=embed)
