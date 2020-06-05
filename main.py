@@ -83,6 +83,7 @@ class Pokemon(commands.Cog):
     async def listpokemon(self,ctx,author):
         userpokemon = db.GetAllPokemon(self,author.id)
         string = ""
+        print(len(userpokemon))
         for i in range(len(userpokemon)):
             string = string + "/n "+userpokemon[i]["pokemonname"] +"level : "+ userpokemon[i]["level"] + "Number " + userpokemon[i]["nomor"]
         embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
