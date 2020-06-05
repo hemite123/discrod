@@ -98,7 +98,7 @@ class Pokemon(commands.Cog):
 async def on_message(message):
     if message.content is not None:
        print(pokeserverpokemonname)
-       xp = random.randrange(1,80)
+       xp = random.randrange(1,50)
        for ite in range(len(spam)):
           if spam[ite][0] == message.channel.id:
               if spam[ite][3] > 0:
@@ -213,7 +213,7 @@ async def pick(ctx,pokemons):
     await pokemon.pickpokemon(ctx,ctx.author,pokemons)
 
 @bot.command(name="catch",help="Catch Wild Pokemon Spawn In Chat")
-async def catch(ctx,pokename):
+async def catch(ctx,*pokename):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.catchpokemon(ctx,ctx.author,pokename)
 
