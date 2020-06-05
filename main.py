@@ -17,6 +17,7 @@ pevo3 = []
 pevo1 = []
 pmega = []
 pform = []
+spam = []
 pokeserverspawntimer = []
 pokeserverpokemonname = []
 defaultpref = ['poke']
@@ -97,9 +98,46 @@ class Pokemon(commands.Cog):
 @bot.event
 async def on_message(message):
     if message.content is not None:
-        channel = message.channel
-        messaged = await channel.history("limit=3").flatten()
-        print(messaged.content)
+       xp = random.randrange(1,80)
+       for ite in range(len(spam)):
+           if spam[ite][0] == message.channel.id:
+               if spam[ite][3] > 0:
+                   spam[ite][3] = spam[ite][3] - 1
+               elif spam[ite][2] > 3:
+                   spam[ite][3] = 5000
+               elif spam[ite][2] < 3 && spam[ite][1] != message.author.id:
+                   spam[ite][1] = message.author.id
+                   spam[ite][2] = 0
+               if spam[ite][1] == message.author.id && spam[ite][2] > 3:
+                    xp = xp - (xp*0.25)
+                    data = db.GetPokemonSelect(self,message.author.id)
+                    exp = data["curexp"] + xp
+                    level = data["level"]
+                    with open("level.json") as leveldb:
+                        dataload = json.load(leveldb)
+                        for i in range (len(dataload)):
+                            if dataload[i]["level"] == data["level"]:
+                                if exp > dataload[i]["curexp"]:
+                                    level = level + 1
+                                    exp = 0
+                                    embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                    await message.channel.send(embed=embed)
+                    db.UpdatePokemonInfo(self,message.author.id,data["nomor"],level,exp)
+                    
+               else:    
+                   data = db.GetPokemonSelect(self,message.author.id)
+                   exp = data["curexp"] + xp
+                    level = data["level"]
+                    with open("level.json") as leveldb:
+                        dataload = json.load(leveldb)
+                        for i in range (len(dataload)):
+                            if dataload[i]["level"] == data["level"]:
+                                if exp > dataload[i]["curexp"]:
+                                    level = level + 1
+                                    exp = 0
+                                    embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                    await message.channel.send(embed=embed)
+                   db.UpdatePokemonInfo(self,message.author.id,data["nomor"],level,exp)  
         print(message.content)
         index = 0
         for i in range(len(pokeserverspawntimer)):
@@ -142,6 +180,7 @@ async def on_message(message):
         if index == len(pokeserverspawntimer):
             pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
             pokeserverpokemonname.append([message.channel.id,None,0])
+            spam.append([message.channel.id,None,0,0])
             index = 0
 
         
