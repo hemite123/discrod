@@ -103,7 +103,7 @@ async def on_message(message):
           if spam[ite][0] == message.channel.id:
               if spam[ite][3] > 0:
                   spam[ite][3] = spam[ite][3] - 1
-              elif spam[ite][2] > 3:
+              elif spam[ite][2] > 10:
                   spam[ite][3] = 5000
               elif spam[ite][2] < 3 and spam[ite][1] != message.author.id:
                   spam[ite][1] = message.author.id
@@ -123,10 +123,11 @@ async def on_message(message):
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                     await message.channel.send(embed=embed)
-                    db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
+                     db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
                     
               else:                                  
                    data = db.GetPokemonSelect(bot,message.author.id)
+                   print(data)
                    if data != False:         
                     exp = data["curexp"] + xp
                     level = data["level"]
@@ -139,7 +140,7 @@ async def on_message(message):
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                     await message.channel.send(embed=embed)
-                    db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)  
+                     db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)  
        print(message.content)
        index = 0
        for i in range(len(pokeserverspawntimer)):
@@ -230,21 +231,20 @@ def pokemondata():
         dataload = json.load(pokedb)
         for i in range(len(dataload)):
             print(dataload[i]["name"])
-            if dataload[i]["starter"]:
-                pstart.append(dataload[i]["name"])
-            elif dataload[i]["species"] == "Season":
-                pform.append(dataload[i]["name"])
-            elif dataload[i]["family"]["evolutionStage"] == 1:
-                pevo1.append(dataload[i]["name"])      
-            elif dataload[i]["family"]["evolutionStage"] == 2:
-                pevo2.append(dataload[i]["name"])
-            elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
-                pevo3.append(dataload[i]["name"])
-            elif dataload[i]["legendary"]:
-                plegend.append(dataload[i]["name"]) 
-            elif dataload[i]["mythical"]:
-                pmythical.append(dataload[i]["name"])       
-            elif dataload[i]["name"] == "Alolan "+ dataload[0]["name"]:
+            if dataload[i][0]["starter"]:
+                pstart.append(dataload[i][0]["name"])
+            elif dataload[i][0]["legendary"]:
+                plegend.append(dataload[i][0]["name"]) 
+            elif dataload[i][0]["mythical"]:
+                pmythical.append(dataload[i][0]["name"])       
+            elif dataload[i][0]["family"][0]["evolutionStage"] == 1:
+                pevo1.append(dataload[i][0]["name"])      
+            elif dataload[i][0]["family"]["evolutionStage"] == 2:
+                pevo2.append(dataload[i][0]["name"])
+            elif dataload[i][0]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
+                pevo3.append(dataload[i][0]["name"])
+            
+            elif dataload[i]["name"] == "Alolan "+ dataload[i][0]["name"]:
                 palolan.append(dataload[i]["name"]) 
             
             
