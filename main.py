@@ -80,6 +80,14 @@ class Pokemon(commands.Cog):
         else:
             await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
+    async def listpokemon(self,ctx,author):
+        userpokemon = db.GetAllPokemon(self,author.id)
+        string = ""
+        for i in range(len(userpokemon)):
+            string = string + "/n "+userpokemon[i]["pokemonname"] +"level : "+ userpokemon[i]["level"] + "Number " + userpokemon[i]["nomor"]
+        embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
+        embed.add_field(name="Pokemon Data",value=string)
+        await ctx.send(embed=embed)
 
 
 @bot.event
@@ -162,6 +170,11 @@ async def pick(ctx,pokemons):
 async def catch(ctx,pokename):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.catchpokemon(ctx,ctx.author,pokename)
+
+@bot.command(name="mon",help="Catch Wild Pokemon Spawn In Chat")
+async def catch(ctx,pokename):
+    pokemon = bot.get_cog("Pokemon")
+    await pokemon.listpokemon(ctx,ctx.author)
         
 
 def pokemondata():
