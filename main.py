@@ -76,7 +76,7 @@ class Pokemon(commands.Cog):
                                 pask = pask + pokemonname[i]
                             else:
                                 pask = pask + " " + pokemonname[i]
-                        if pname.lower() == pokemonname.lower(): 
+                        if pname.lower() == pask.lower(): 
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                             number = db.ManyPokemon(self,author.id) + 1
                             db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
