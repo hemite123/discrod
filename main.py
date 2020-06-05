@@ -65,6 +65,7 @@ class Pokemon(commands.Cog):
 
     async def catchpokemon(self,ctx,author,pokemonname):
         checkuser = db.CheckUser(self,author.id,"rcount")
+        wrong = 0
         if checkuser > 0:
             for i in range(len(pokeserverpokemonname)):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
@@ -189,7 +190,7 @@ def pokemondata():
         for i in range(len(dataload)):
             print(dataload[i]["name"])
             if dataload[i]["starter"]:
-                pstart.append(dataload[i]["name"]))
+                pstart.append(dataload[i]["name"])
             elif dataload[i]["species"] == "Season":
                 pform.append(dataload[i]["name"])
             elif dataload[i]["family"]["evolutionStage"] == 1:
