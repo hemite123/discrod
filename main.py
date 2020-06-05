@@ -125,9 +125,9 @@ async def on_message(message):
                                     await message.channel.send(embed=embed)
                     db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
                     
-              else:    
-                  if data != False:                                       
-                    data = db.GetPokemonSelect(bot,message.author.id)
+              else:                                  
+                   data = db.GetPokemonSelect(bot,message.author.id)
+                   if data != False:         
                     exp = data["curexp"] + xp
                     level = data["level"]
                     with open("level.json") as leveldb:
