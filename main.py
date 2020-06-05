@@ -71,7 +71,7 @@ class Pokemon(commands.Cog):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
                         pname = str(pokeserverpokemonname[i][1])
                         pask = ""
-                        for i in range(len(pokemonname):
+                        for i in range(len(pokemonname)):
                             if pask is None:
                                 pask = pask + pokemonname[i]
                             else:
