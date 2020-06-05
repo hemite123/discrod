@@ -115,10 +115,9 @@ async def on_message(message):
                     level = data["level"]
                     with open("level.json") as leveldb:
                         dataload = json.load(leveldb)
-                        print(dataload[0]["level"])
                         for i in range (len(dataload)):
-                            if dataload[i]["level"] == data["level"]:
-                                if exp > dataload[i]["curexp"]:
+                            if str(dataload[i]["level"]) == str(data["level"]):
+                                if int(exp) > int(dataload[i]["curexp"]):
                                     level = level + 1
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
@@ -134,8 +133,8 @@ async def on_message(message):
                         dataload = json.load(leveldb)
                         print(dataload[0]["level"])
                         for i in range (len(dataload)):
-                            if dataload[i]["level"] == data["level"]:
-                                if exp > dataload[i]["curexp"]:
+                            if str(dataload[i]["level"]) == str(data["level"]):
+                               if int(exp) > int(dataload[i]["curexp"]):
                                     level = level + 1
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
