@@ -115,6 +115,7 @@ async def on_message(message):
                     level = data["level"]
                     with open("level.json") as leveldb:
                         dataload = json.load(leveldb)
+                        print(dataload)
                         for i in range (len(dataload)):
                             if dataload[i]["level"] == data["level"]:
                                 if exp > dataload[i]["curexp"]:
@@ -132,6 +133,7 @@ async def on_message(message):
                     level = data["level"]
                     with open("level.json") as leveldb:
                         dataload = json.load(leveldb)
+                        print(dataload)
                         for i in range (len(dataload)):
                             if dataload[i]["level"] == data["level"]:
                                 if exp > dataload[i]["curexp"]:
@@ -171,7 +173,7 @@ async def on_message(message):
                                            embed.set_image(url=dataload[i]["sprite"])
                                    await message.channel.send(embed=embed)
                                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
-                                   print(pokserverpokemonnam)
+                                   print(pokserverpokemonname)
                                    break
                             
                else:
