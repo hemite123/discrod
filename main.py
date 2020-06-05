@@ -70,7 +70,12 @@ class Pokemon(commands.Cog):
             for i in range(len(pokeserverpokemonname)):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
                         pname = str(pokeserverpokemonname[i][1])
-                        print(pokemonname)
+                        pask = ""
+                        for i in range(len(pokemonname):
+                            if pask is None:
+                                pask = pask + pokemonname[i]
+                            else:
+                                pask = pask + " " + pokemonname[i]
                         if pname.lower() == pokemonname.lower(): 
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                             number = db.ManyPokemon(self,author.id) + 1
