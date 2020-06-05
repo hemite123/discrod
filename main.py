@@ -99,6 +99,7 @@ class Pokemon(commands.Cog):
 async def on_message(message):
     if message.content is not None:
        print(pokeserverpokemonname)
+       print(pokeserverspawntimer)
        xp = random.randrange(1,50)
        for ite in range(len(spam)):
           if spam[ite][0] == message.channel.id:
