@@ -99,32 +99,17 @@ class Pokemon(commands.Cog):
 async def on_message(message):
     if message.content is not None:
        xp = random.randrange(1,80)
-        for ite in range(len(spam)):
-           if spam[ite][0] == message.channel.id:
-               if spam[ite][3] > 0:
-                   spam[ite][3] = spam[ite][3] - 1
-               elif spam[ite][2] > 3:
-                   spam[ite][3] = 5000
-               elif spam[ite][2] < 3 and spam[ite][1] != message.author.id:
-                   spam[ite][1] = message.author.id
-                   spam[ite][2] = 0
-               if spam[ite][1] == message.author.id and spam[ite][2] > 3:
-                    xp = xp - (xp*0.25)
-                    data = db.GetPokemonSelect(self,message.author.id)
-                    exp = data["curexp"] + xp
-                    level = data["level"]
-                    with open("level.json") as leveldb:
-                        dataload = json.load(leveldb)
-                        for i in range (len(dataload)):
-                            if dataload[i]["level"] == data["level"]:
-                                if exp > dataload[i]["curexp"]:
-                                    level = level + 1
-                                    exp = 0
-                                    embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
-                                    await message.channel.send(embed=embed)
-                    db.UpdatePokemonInfo(self,message.author.id,data["nomor"],level,exp)
-                    
-               else:    
+       for ite in range(len(spam)):
+          if spam[ite][0] == message.channel.id:
+              if spam[ite][3] > 0:
+                  spam[ite][3] = spam[ite][3] - 1
+              elif spam[ite][2] > 3:
+                  spam[ite][3] = 5000
+              elif spam[ite][2] < 3 and spam[ite][1] != message.author.id:
+                  spam[ite][1] = message.author.id
+                  spam[ite][2] = 0
+              if spam[ite][1] == message.author.id and spam[ite][2] > 3:
+                   xp = xp - (xp*0.25)
                    data = db.GetPokemonSelect(self,message.author.id)
                    exp = data["curexp"] + xp
                    level = data["level"]
@@ -137,51 +122,66 @@ async def on_message(message):
                                    exp = 0
                                    embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                    await message.channel.send(embed=embed)
-                   db.UpdatePokemonInfo(self,message.author.id,data["nomor"],level,exp)  
-        print(message.content)
-        index = 0
-        for i in range(len(pokeserverspawntimer)):
-                if pokeserverspawntimer[i][0] == message.channel.id:
-                    if pokeserverspawntimer[i][1] > 0:
-                        pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
-                        break
-                    else:
-                        for j in range(len(pokeserverpokemonname)):
-                            if pokeserverpokemonname[j][0] == message.channel.id:
-                                if pokeserverpokemonname[j][1] is None:
-                                    droprate = random.uniform(0.1,100.0)
-                                    if droprate >= 48.9 or droprate <= 48.9:
-                                        pokename = pevo1[random.randrange(len(pevo1))]
-                                    elif droprate <= 30.0:
-                                        pokename = pevo2[random.randrange(len(pevo2))]
-                                    elif droprate <= 15.0:
-                                        pokename = pevo3[random.randrange(len(pevo3))]
-                                    elif droprate <= 5.0:
-                                        pokename = palolan[random.randrange(len(palolan))]
-                                    elif droprate <= 1.0:
-                                        pokename = pmythical[random.randrange(len(pmythical))]
-                                    elif droprate >= 0.1:
-                                        pokename = plegend[random.randrange(len(plegend))]
-                                    pokeserverpokemonname[j][1] = pokename
-                                    pokeserverpokemonname[j][2] = random.randrange(1,50)
-                                    embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                    with open("pokemon.json") as pokedb:
-                                        dataload = json.load(pokedb)
-                                    for i in range(len(dataload)):
-                                        if dataload[i]["name"] == pokename:
-                                            embed.set_image(url=dataload[i]["sprite"])
-                                    await message.channel.send(embed=embed)
-                                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
-                                    break
+                   db.UpdatePokemonInfo(self,message.author.id,data["nomor"],level,exp)
+                    
+              else:    
+                  data = db.GetPokemonSelect(self,message.author.id)
+                  exp = data["curexp"] + xp
+                  level = data["level"]
+                  with open("level.json") as leveldb:
+                      dataload = json.load(leveldb)
+                      for i in range (len(dataload)):
+                          if dataload[i]["level"] == data["level"]:
+                              if exp > dataload[i]["curexp"]:
+                                  level = level + 1
+                                  exp = 0
+                                  embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                  await message.channel.send(embed=embed)
+                  db.UpdatePokemonInfo(self,message.author.id,data["nomor"],level,exp)  
+       print(message.content)
+       index = 0
+       for i in range(len(pokeserverspawntimer)):
+               if pokeserverspawntimer[i][0] == message.channel.id:
+                   if pokeserverspawntimer[i][1] > 0:
+                       pokeserverspawntimer[i][1] = pokeserverspawntimer[i][1] - 1
+                       break
+                   else:
+                       for j in range(len(pokeserverpokemonname)):
+                           if pokeserverpokemonname[j][0] == message.channel.id:
+                               if pokeserverpokemonname[j][1] is None:
+                                   droprate = random.uniform(0.1,100.0)
+                                   if droprate >= 48.9 or droprate <= 48.9:
+                                       pokename = pevo1[random.randrange(len(pevo1))]
+                                   elif droprate <= 30.0:
+                                       pokename = pevo2[random.randrange(len(pevo2))]
+                                   elif droprate <= 15.0:
+                                       pokename = pevo3[random.randrange(len(pevo3))]
+                                   elif droprate <= 5.0:
+                                       pokename = palolan[random.randrange(len(palolan))]
+                                   elif droprate <= 1.0:
+                                       pokename = pmythical[random.randrange(len(pmythical))]
+                                   elif droprate >= 0.1:
+                                       pokename = plegend[random.randrange(len(plegend))]
+                                   pokeserverpokemonname[j][1] = pokename
+                                   pokeserverpokemonname[j][2] = random.randrange(1,50)
+                                   embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                                   with open("pokemon.json") as pokedb:
+                                       dataload = json.load(pokedb)
+                                   for i in range(len(dataload)):
+                                       if dataload[i]["name"] == pokename:
+                                           embed.set_image(url=dataload[i]["sprite"])
+                                   await message.channel.send(embed=embed)
+                                   print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
+                                   break
                             
-                else:
-                    index += 1
+               else:
+                   index += 1
                         
-        if index == len(pokeserverspawntimer):
-            pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
-            pokeserverpokemonname.append([message.channel.id,None,0])
-            spam.append([message.channel.id,None,0,0])
-            index = 0
+       if index == len(pokeserverspawntimer):
+           pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
+           pokeserverpokemonname.append([message.channel.id,None,0])
+           spam.append([message.channel.id,None,0,0])
+           index = 0
 
         
         
