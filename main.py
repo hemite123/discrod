@@ -127,16 +127,16 @@ async def on_message(message):
                else:    
                    data = db.GetPokemonSelect(self,message.author.id)
                    exp = data["curexp"] + xp
-                    level = data["level"]
-                    with open("level.json") as leveldb:
-                        dataload = json.load(leveldb)
-                        for i in range (len(dataload)):
-                            if dataload[i]["level"] == data["level"]:
-                                if exp > dataload[i]["curexp"]:
-                                    level = level + 1
-                                    exp = 0
-                                    embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
-                                    await message.channel.send(embed=embed)
+                   level = data["level"]
+                   with open("level.json") as leveldb:
+                       dataload = json.load(leveldb)
+                       for i in range (len(dataload)):
+                           if dataload[i]["level"] == data["level"]:
+                               if exp > dataload[i]["curexp"]:
+                                   level = level + 1
+                                   exp = 0
+                                   embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                   await message.channel.send(embed=embed)
                    db.UpdatePokemonInfo(self,message.author.id,data["nomor"],level,exp)  
         print(message.content)
         index = 0
