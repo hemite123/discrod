@@ -21,7 +21,7 @@ def CheckUser(self,id,act):
         return response
 
 def UpdateUserPokemon(self,id,pokename):
-    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"pokestart":pokename,"datapost":"update","select":1},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"pokemon":pokename,"datapost":"update","select":1},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
     print(senddata.text)
 
 def InsertPokemon(self,id,pokename,level,nomor):
