@@ -97,6 +97,7 @@ class Pokemon(commands.Cog):
 @bot.event
 async def on_message(message):
     if message.content is not None:
+       print(pokeserverpokemonname)
        xp = random.randrange(1,80)
        for ite in range(len(spam)):
           if spam[ite][0] == message.channel.id:
@@ -117,7 +118,7 @@ async def on_message(message):
                         dataload = json.load(leveldb)
                         for i in range (len(dataload)):
                             if str(dataload[i]["level"]) == str(data["level"]):
-                                if int(exp) > int(dataload[i]["curexp"]):
+                                if int(exp) > int(dataload[i]["exp"]):
                                     level = level + 1
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
@@ -134,7 +135,7 @@ async def on_message(message):
                         print(dataload[0]["level"])
                         for i in range (len(dataload)):
                             if str(dataload[i]["level"]) == str(data["level"]):
-                               if int(exp) > int(dataload[i]["curexp"]):
+                               if int(exp) > int(dataload[i]["exp"]):
                                     level = level + 1
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
@@ -171,7 +172,6 @@ async def on_message(message):
                                            embed.set_image(url=dataload[i]["sprite"])
                                    await message.channel.send(embed=embed)
                                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
-                                   print(pokeserverpokemonname)
                                    break
                             
                else:
