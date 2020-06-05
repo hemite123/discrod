@@ -52,7 +52,7 @@ class Pokemon(commands.Cog):
             no = 0
             for i in range(len(pstart)):
                 if pstart[i].lower() == pokemonname.lower():
-                    db.UpdateUserPokemon(self,author.id,pokemonname)
+                    db.UpdateUserPokemon(self,author.id,pstart[i])
                     embed = discord.Embed(title="Pokemon Select " + author.name,description=" Your Starter Pokemon Is " + pokemonname)
                     await ctx.send(embed=embed)
                     break
