@@ -111,7 +111,7 @@ async def on_message(message):
                    xp = xp - (xp*0.25)
                    data = db.GetPokemonSelect(bot,message.author.id)
                    if data != False:
-                    exp = data["curexp"] + xp
+                    exp = int(data["curexp"]) + xp
                     level = data["level"]
                     with open("level.json") as leveldb:
                         dataload = json.load(leveldb)
@@ -128,7 +128,7 @@ async def on_message(message):
                    data = db.GetPokemonSelect(bot,message.author.id)
                    print(data)
                    if data != False:         
-                    exp = data["curexp"] + xp
+                    exp = int(data["curexp"]) + xp
                     level = data["level"]
                     with open("level.json") as leveldb:
                         dataload = json.load(leveldb)
@@ -140,7 +140,6 @@ async def on_message(message):
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                     await message.channel.send(embed=embed)
                     db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)  
-       print(message.content)
        index = 0
        for i in range(len(pokeserverspawntimer)):
                if pokeserverspawntimer[i][0] == message.channel.id:
@@ -172,6 +171,7 @@ async def on_message(message):
                                            embed.set_image(url=dataload[i]["sprite"])
                                    await message.channel.send(embed=embed)
                                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
+                                   print(pokserverpokemonnam)
                                    break
                             
                else:
