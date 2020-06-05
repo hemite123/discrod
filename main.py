@@ -72,10 +72,8 @@ class Pokemon(commands.Cog):
                         pname = str(pokeserverpokemonname[i][1])
                         pask = ""
                         for i in range(len(pokemonname)):
-                            if pask is None:
-                                pask = pask + pokemonname[i]
-                            else:
-                                pask = pask + " "+ pokemonname[i]
+                               pask = pask + pokemonname[i]
+                          
                         print(pask)
                         if pname.lower() == pask.lower(): 
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
