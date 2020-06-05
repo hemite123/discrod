@@ -11,7 +11,6 @@ import json
 pstart = []
 plegend = [] 
 pmythical = []
-palolan = [] 
 pevo2 = []
 pevo3 = []
 pevo1 = []
@@ -155,12 +154,10 @@ async def on_message(message):
                                    droprate = random.uniform(0.1,100.0)
                                    if droprate >= 48.9 or droprate <= 48.9:
                                        pokename = pevo1[random.randrange(len(pevo1))]
-                                   elif droprate <= 30.0:
+                                   elif droprate <= 35.0:
                                        pokename = pevo2[random.randrange(len(pevo2))]
                                    elif droprate <= 15.0:
                                        pokename = pevo3[random.randrange(len(pevo3))]
-                                   elif droprate <= 5.0:
-                                       pokename = palolan[random.randrange(len(palolan))]
                                    elif droprate <= 1.0:
                                        pokename = pmythical[random.randrange(len(pmythical))]
                                    elif droprate >= 0.1:
@@ -232,19 +229,19 @@ def pokemondata():
         for i in range(len(dataload)):
             print(dataload[i]["name"])
             if dataload[i][0]["starter"]:
-                pstart.append(dataload[i][0]["name"])
+                pstart.append(dataload[i]["name"])
             elif dataload[i][0]["legendary"]:
-                plegend.append(dataload[i][0]["name"]) 
+                plegend.append(dataload[i][["name"]) 
             elif dataload[i][0]["mythical"]:
-                pmythical.append(dataload[i][0]["name"])       
-            elif dataload[i][0]["family"][0]["evolutionStage"] == 1:
-                pevo1.append(dataload[i][0]["name"])      
+                pmythical.append(dataload[i]["name"])       
+            elif dataload[i][0]["family"]["evolutionStage"] == 1:
+                pevo1.append(dataload[i]["name"])      
             elif dataload[i][0]["family"]["evolutionStage"] == 2:
-                pevo2.append(dataload[i][0]["name"])
+                pevo2.append(dataload[i]["name"])
             elif dataload[i][0]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
-                pevo3.append(dataload[i][0]["name"])
+                pevo3.append(dataload[i]["name"])
             
-            elif dataload[i]["name"] == "Alolan "+ dataload[i][0]["name"]:
+            elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
                 palolan.append(dataload[i]["name"]) 
             
             
