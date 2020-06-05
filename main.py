@@ -123,7 +123,7 @@ async def on_message(message):
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                     await message.channel.send(embed=embed)
-                     db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
+                    db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
                     
               else:                                  
                    data = db.GetPokemonSelect(bot,message.author.id)
@@ -140,7 +140,7 @@ async def on_message(message):
                                     exp = 0
                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                     await message.channel.send(embed=embed)
-                     db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)  
+                    db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)  
        print(message.content)
        index = 0
        for i in range(len(pokeserverspawntimer)):
