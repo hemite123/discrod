@@ -172,7 +172,7 @@ async def catch(ctx,pokename):
     await pokemon.catchpokemon(ctx,ctx.author,pokename)
 
 @bot.command(name="mon",help="Check Your Catch Pokemon")
-async def catch(ctx):
+async def mon(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.listpokemon(ctx,ctx.author)
         
