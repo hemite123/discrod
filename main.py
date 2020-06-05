@@ -15,6 +15,8 @@ palolan = []
 pevo2 = []
 pevo3 = []
 pevo1 = []
+pmega = []
+pform = []
 pokeserverspawntimer = []
 pokeserverpokemonname = []
 defaultpref = ['poke']
@@ -85,7 +87,7 @@ class Pokemon(commands.Cog):
         string = ""
         print(len(userpokemon))
         for i in range(len(userpokemon)):
-            string = string + "\n "+userpokemon[i]["pokemonname"] +"level : "+ userpokemon[i]["level"] + "Number " + userpokemon[i]["nomor"]
+            string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
         embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
         embed.add_field(name="Pokemon Data",value=string)
         await ctx.send(embed=embed)
@@ -94,6 +96,9 @@ class Pokemon(commands.Cog):
 @bot.event
 async def on_message(message):
     if message.content is not None:
+        channel = message.channel
+        messaged = await channel.history("limit=3").flatten()
+        print(messaged.content)
         print(message.content)
         index = 0
         for i in range(len(pokeserverspawntimer)):
@@ -127,7 +132,7 @@ async def on_message(message):
                                         if dataload[i]["name"] == pokename:
                                             embed.set_image(url=dataload[i]["sprite"])
                                     await message.channel.send(embed=embed)
-                                    print(f"Pokemon {pokename} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
+                                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
                                     break
                             
                 else:
@@ -184,19 +189,22 @@ def pokemondata():
         for i in range(len(dataload)):
             print(dataload[i]["name"])
             if dataload[i]["starter"]:
-                pstart.append(dataload[i]["name"])
-            elif dataload[i]["legendary"]:
-                plegend.append(dataload[i]["name"]) 
-            elif dataload[i]["mythical"]:
-                pmythical.append(dataload[i]["name"])       
-            elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
-                palolan.append(dataload[i]["name"]) 
+                pstart.append(dataload[i]["name"]))
+            elif dataload[i]["species"] == "Season":
+                pform.append(dataload[i]["name"])
             elif dataload[i]["family"]["evolutionStage"] == 1:
                 pevo1.append(dataload[i]["name"])      
             elif dataload[i]["family"]["evolutionStage"] == 2:
                 pevo2.append(dataload[i]["name"])
             elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
                 pevo3.append(dataload[i]["name"])
+            elif dataload[i]["legendary"]:
+                plegend.append(dataload[i]["name"]) 
+            elif dataload[i]["mythical"]:
+                pmythical.append(dataload[i]["name"])       
+            elif dataload[i]["name"] == "Alolan "+ dataload[0]["name"]:
+                palolan.append(dataload[i]["name"]) 
+            
             
            
             
