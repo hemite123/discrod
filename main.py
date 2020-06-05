@@ -115,7 +115,7 @@ async def on_message(message):
                     level = data["level"]
                     with open("level.json") as leveldb:
                         dataload = json.load(leveldb)
-                        print(dataload)
+                        print(dataload[0]["level"])
                         for i in range (len(dataload)):
                             if dataload[i]["level"] == data["level"]:
                                 if exp > dataload[i]["curexp"]:
