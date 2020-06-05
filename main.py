@@ -69,7 +69,7 @@ class Pokemon(commands.Cog):
         if checkuser > 0:
             for i in range(len(pokeserverpokemonname)):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
-                        pname = pokeserverpokemonname[i][1]
+                        pname = str(pokeserverpokemonname[i][1])
                         if pname.lower() == pokemonname.lower(): 
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                             number = db.ManyPokemon(self,author.id) + 1
