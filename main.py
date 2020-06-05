@@ -228,17 +228,17 @@ def pokemondata():
         dataload = json.load(pokedb)
         for i in range(len(dataload)):
             print(dataload[i]["name"])
-            if dataload[i][0]["starter"]:
+            if dataload[i]["starter"]:
                 pstart.append(dataload[i]["name"])
-            elif dataload[i][0]["legendary"]:
-                plegend.append(dataload[i][["name"]) 
-            elif dataload[i][0]["mythical"]:
+            elif dataload[i]["legendary"]:
+                plegend.append(dataload[i]["name"]) 
+            elif dataload[i]["mythical"]:
                 pmythical.append(dataload[i]["name"])       
-            elif dataload[i][0]["family"]["evolutionStage"] == 1:
+            elif dataload[i]["family"]["evolutionStage"] == 1:
                 pevo1.append(dataload[i]["name"])      
-            elif dataload[i][0]["family"]["evolutionStage"] == 2:
+            elif dataload[i]["family"]["evolutionStage"] == 2:
                 pevo2.append(dataload[i]["name"])
-            elif dataload[i][0]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
+            elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
                 pevo3.append(dataload[i]["name"])
             
             elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
