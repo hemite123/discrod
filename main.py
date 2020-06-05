@@ -110,7 +110,7 @@ async def on_message(message):
                   spam[ite][2] = 0
               if spam[ite][1] == message.author.id and spam[ite][2] > 3:
                    xp = xp - (xp*0.25)
-                   data = db.GetPokemonSelect(self,message.author.id)
+                   data = db.GetPokemonSelect(bot,message.author.id)
                    exp = data["curexp"] + xp
                    level = data["level"]
                    with open("level.json") as leveldb:
