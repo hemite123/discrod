@@ -99,7 +99,7 @@ class Pokemon(commands.Cog):
 async def on_message(message):
     if message.content is not None:
        xp = random.randrange(1,80)
-       for ite in range(len(spam)):
+        for ite in range(len(spam)):
            if spam[ite][0] == message.channel.id:
                if spam[ite][3] > 0:
                    spam[ite][3] = spam[ite][3] - 1
