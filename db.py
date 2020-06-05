@@ -21,7 +21,7 @@ def CheckUser(self,id,act):
         return response
 
 def UpdateUserPokemon(self,id,pokename):
-    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"pokestart":pokename,"datapost":"update"},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"pokestart":pokename,"datapost":"update","select":1},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
     print(senddata.text)
 
 def InsertPokemon(self,id,pokename,level,nomor):
@@ -37,3 +37,12 @@ def GetAllPokemon(self,id):
     getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id)+"&action=listpokemon",headers={"Content-Type":"application/json"})
     response = getdata.json()
     return response
+
+def GetPokemonSelect(self,id):
+    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id)+"&action=pokemons",headers={"Content-Type":"application/json"})
+    response = getdata.json()
+    return response
+
+def UpdatePokemonInfo(self,id,nomor,level,curexp):
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"datapost":"updatepokeinfo","nomor":nomor,"level":level,"curexp":curexp},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
+    print(senddata.text)
