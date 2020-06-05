@@ -5,6 +5,7 @@ import db
 import pymysql
 import random
 import time
+import json
 
 
 pstart = []
@@ -31,6 +32,7 @@ class Pokemon(commands.Cog):
 
     async def startgame(self,ctx,author):
         checkuser = db.CheckUser(self,author.id,"rcount")
+        print(checkuser)
         if checkuser > 0:
             embed = discord.Embed(title="Pick Pokemon " + author.name,description="Pick Your Starter Pokemon Using " + defaultpref[0] + "pick <pokemon>")
             embed.add_field(name="Starter Pokemon",value="Charmander|Squirtle|Bulbasaur",inline=True)
@@ -91,25 +93,26 @@ async def on_message(message):
                             if pokeserverpokemonname[j][0] == message.channel.id:
                                 if pokeserverpokemonname[j][1] is None:
                                     droprate = random.uniform(0.1,100.0)
-                                    if droprate >= 48.9:
+                                    if droprate >= 48.9 or droprate <= 48.9:
                                         pokename = pevo1[random.randrange(len(pevo1))]
-                                    elif droprate >= 30.0:
+                                    elif droprate <= 30.0:
                                         pokename = pevo2[random.randrange(len(pevo2))]
-                                    elif droprate >= 15.0:
+                                    elif droprate <= 15.0:
                                         pokename = pevo3[random.randrange(len(pevo3))]
-                                    elif droprate >= 5.0:
+                                    elif droprate <= 5.0:
                                         pokename = palolan[random.randrange(len(palolan))]
-                                    elif droprate >= 1.0:
+                                    elif droprate <= 1.0:
                                         pokename = pmythical[random.randrange(len(pmythical))]
                                     elif droprate >= 0.1:
                                         pokename = plegend[random.randrange(len(plegend))]
                                     pokeserverpokemonname[j][1] = pokename
                                     pokeserverpokemonname[j][2] = random.randrange(1,50)
-                                    response = requests.get(f"https://pokeapi.glitch.me/v1/pokemon/{pokename}")
-                                    data_json = response.json()
                                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                                    if data_json["sprite"] is not None:
-                                        embed.set_image(url=data_json["sprite"])
+                                    with open("pokemon.json") as pokedb:
+                                        dataload = json.load(pokedb)
+                                    for i in range(len(dataload)):
+                                        if dataload[i]["name"] == pokename:
+                                            embed.set_image(url=dataload[i]["sprite"])
                                     await message.channel.send(embed=embed)
                                     print(f"Pokemon {pokename} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
                                     break
@@ -158,34 +161,28 @@ async def catch(ctx,pokename):
         
 
 def pokemondata():
-    r1 = requests.get("https://pokeapi.glitch.me/v1/pokemon/counts")
-    request = r1.json()
-    count = request["total"]
-    for i in range(1,count):
-        print(i)
-        responseapi = requests.get("https://pokeapi.glitch.me/v1/pokemon/" + str(i) , headers={"User-Agent": "BastionDiscordBot (https://bastionbot.org, v6.16.1)"})
-        datajson = responseapi.json()
-        print(datajson)
-        try:
-            if datajson[0]["starter"]:
-                pstart.append(datajson[0]['name'])
-            elif datajson[0]["legendary"]:
-                plegend.append(datajson[0]['name'])
-            elif datajson[0]["mythical"]:
-                pmythical.append(datajson[0]['name'])
-            for einfo in datajson[0]["family"]["evolutionLine"]:
-                if len(einfo) == 2:
-                    pevo1.append(einfo[0])
-                    pevo2.append(einfo[1])
-                elif len(einfo) == 3:
-                    pevo1.append(einfo[0])
-                    pevo2.append(einfo[1])
-                    pevo3.append(einfo[2])
-                else:
-                    pevo1.append(einfo[0])
-            time.sleep(20)
-        except Exception as e:
-           print("ERROR")
+    with open("pokemon.json") as pokedb:
+        dataload = json.load(pokedb)
+        for i in range(len(dataload)):
+            print(dataload[i]["name"])
+            if dataload[i]["starter"]:
+                pstart.append(dataload[i]["name"])
+            elif dataload[i]["legendary"]:
+                plegend.append(dataload[i]["name"]) 
+            elif dataload[i]["mythical"]:
+                pmythical.append(dataload[i]["name"])       
+            elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
+                palolan.append(dataload[i]["name"]) 
+            elif dataload[i]["family"]["evolutionStage"] == 1:
+                pevo1.append(dataload[i]["name"])      
+            elif dataload[i]["family"]["evolutionStage"] == 2:
+                pevo2.append(dataload[i]["name"])
+            elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
+                pevo3.append(dataload[i]["name"])
+            
+           
+            
+
 pokemondata()
 bot.add_cog(Pokemon(bot))
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
