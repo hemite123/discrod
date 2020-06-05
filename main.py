@@ -172,7 +172,7 @@ async def on_message(message):
                                            embed.set_image(url=dataload[i]["sprite"])
                                    await message.channel.send(embed=embed)
                                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
-                                   print(pokserverpokemonname)
+                                   print(pokeserverpokemonname)
                                    break
                             
                else:
