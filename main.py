@@ -171,8 +171,8 @@ async def catch(ctx,pokename):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.catchpokemon(ctx,ctx.author,pokename)
 
-@bot.command(name="mon",help="Catch Wild Pokemon Spawn In Chat")
-async def catch(ctx,pokename):
+@bot.command(name="mon",help="Check Your Catch Pokemon")
+async def catch(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.listpokemon(ctx,ctx.author)
         
