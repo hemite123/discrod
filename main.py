@@ -105,10 +105,10 @@ async def on_message(message):
                    spam[ite][3] = spam[ite][3] - 1
                elif spam[ite][2] > 3:
                    spam[ite][3] = 5000
-               elif spam[ite][2] < 3 && spam[ite][1] != message.author.id:
+               elif spam[ite][2] < 3 and spam[ite][1] != message.author.id:
                    spam[ite][1] = message.author.id
                    spam[ite][2] = 0
-               if spam[ite][1] == message.author.id && spam[ite][2] > 3:
+               if spam[ite][1] == message.author.id and spam[ite][2] > 3:
                     xp = xp - (xp*0.25)
                     data = db.GetPokemonSelect(self,message.author.id)
                     exp = data["curexp"] + xp
