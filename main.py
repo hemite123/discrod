@@ -43,21 +43,24 @@ class Pokemon(commands.Cog):
 
     async def pickpokemon(self,ctx,author,pokemonname):
         checkuser = db.CheckUser(self,author.id,"")
-        for cuser in checkuser:
-            if cuser[3] is None:
-                db.UpdateUserPokemon(self,author.id,pokemonname)
-                embed = discord.Embed(title="Pokemon Select " + author.name,description=" Your Starter Pokemon Is " + pokemonname)
-                await ctx.send(embed=embed)
-            else:
-                embed = discord.Embed(title="Pokemon Select " + author.name,description="Your Have Already Pokemon Starter")
-                await ctx.send(embed=embed)
+        if checkuser["pokestart"] is None:
+            for i in range(len(pstart)):
+                if pstart[i].lower() == pokemonname.lower():
+                    db.UpdateUserPokemon(self,author.id,pokemonname)
+                    embed = discord.Embed(title="Pokemon Select " + author.name,description=" Your Starter Pokemon Is " + pokemonname)
+                    await ctx.send(embed=embed)
+                else:
+                    await ctx.send("<@" + str(author.id) + "> Thats Pokemon Is No Pokemon Starter")
+        else:
+            embed = discord.Embed(title="Pokemon Select " + author.name,description="Your Have Already Pokemon Starter")
+            await ctx.send(embed=embed)
 
     async def catchpokemon(self,ctx,author,pokemonname):
         checkuser = db.CheckUser(self,author.id,"rcount")
         if checkuser > 0:
             for i in range(len(pokeserverpokemonname)):
                     if pokeserverpokemonname[i][0] == ctx.channel.id:
-                        if pokeserverpokemonname[i][1] == pokemonname: 
+                        if pokeserverpokemonname[i][1].lower() == pokemonname.lower(): 
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                             number = db.ManyPokemon(self,author.id) + 1
                             db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
