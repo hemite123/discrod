@@ -32,3 +32,8 @@ def ManyPokemon(self,id):
     getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id)+"&action=manypoke",headers={"Content-Type":"application/json"})
     response = getdata.json()
     return response["many"]
+
+def GetAllPokemon(self,id):
+    getdata = requests.get("https://projectdiscord.000webhostapp.com/userdata.php/?user_id="+str(id)+"&action=listpokemon",headers={"Content-Type":"application/json"})
+    response = getdata.json()
+    return response
