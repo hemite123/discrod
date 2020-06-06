@@ -70,7 +70,7 @@ class Pokemon(commands.Cog):
         wrong = 0
         if checkuser > 0:
             for i in range(len(pokeserverpokemonname)):
-                    if pokeserverpokemonname[i][0] == ctx.channel.id:
+                    if pokeserverpokemonname[i][0] == ctx.channel.id and pokeserverpokemonname[i][1] is not None:
                         pname = str(pokeserverpokemonname[i][1])
                         pask = ""
                         for i in range(len(pokemonname)):
