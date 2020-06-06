@@ -258,9 +258,9 @@ def pokemondata():
             print(dataload[i]["name"])
             if dataload[i]["starter"]:
                 pstart.append(dataload[i]["name"])
-            elif dataload[i]["legendary"]:
+            elif dataload[i]["legendary"] and dataload[i]["mega"] == False:
                 plegend.append(dataload[i]["name"]) 
-            elif dataload[i]["mythical"]:
+            elif dataload[i]["mythical"] and dataload[i]["mega"] == False:
                 pmythical.append(dataload[i]["name"])       
             elif dataload[i]["family"]["evolutionStage"] == 1:
                 pevo1.append(dataload[i]["name"])      
