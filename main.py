@@ -6,6 +6,7 @@ import pymysql
 import random
 import time
 import json
+import re
 
 
 pstart = []
@@ -14,6 +15,7 @@ pmythical = []
 pevo2 = []
 pevo3 = []
 pevo1 = []
+palolan = []
 pmega = []
 pform = []
 spam = []
@@ -175,12 +177,14 @@ async def on_message(message):
                            if pokeserverpokemonname[j][0] == message.channel.id:
                                if pokeserverpokemonname[j][1] is None:
                                    droprate = random.uniform(0.1,100.0)
-                                   if droprate >= 48.9 or droprate <= 48.9:
+                                   if droprate >= 43.9 or droprate <= 43.9:
                                        pokename = pevo1[random.randrange(len(pevo1))]
                                    elif droprate <= 35.0:
                                        pokename = pevo2[random.randrange(len(pevo2))]
                                    elif droprate <= 15.0:
                                        pokename = pevo3[random.randrange(len(pevo3))]
+                                   elif droprate <= 5.0:
+                                       pokename = palolan[random.randrange(len(palolan))]
                                    elif droprate <= 1.0:
                                        pokename = pmythical[random.randrange(len(pmythical))]
                                    elif droprate >= 0.1:
@@ -261,16 +265,21 @@ def pokemondata():
             elif dataload[i]["legendary"] and dataload[i]["mega"] == False:
                 plegend.append(dataload[i]["name"]) 
             elif dataload[i]["mythical"] and dataload[i]["mega"] == False:
-                pmythical.append(dataload[i]["name"])       
-            elif dataload[i]["family"]["evolutionStage"] == 1:
+                pmythical.append(dataload[i]["name"])   
+            elif dataload[i]["mega"]:
+                pmega.append(dataload[i]["name"])
+            elif dataload[i]["name"].count("Alolan") > 0:
+                palolan.append(dataload[i]["name"])
+            elif dataload[i]["name"].count("Forme") > 0 or dataload[i]["name"].count("Form") > 0 or dataload[i]["name"].count("Ash") > 0 or dataload[i]["name"].count("Style") > 0 or dataload[i]["name"].count("Core") > 0:
+                pform.append(dataload[i]["name"])     
+            elif dataload[i]["family"]["evolutionStage"] == 1 and dataload[i]["mega"] == False:
                 pevo1.append(dataload[i]["name"])      
-            elif dataload[i]["family"]["evolutionStage"] == 2:
+            elif dataload[i]["family"]["evolutionStage"] == 2 and dataload[i]["mega"] == False:
                 pevo2.append(dataload[i]["name"])
             elif dataload[i]["family"]["evolutionStage"] == 3 and dataload[i]["mega"] == False:
                 pevo3.append(dataload[i]["name"])
             
-            elif dataload[i]["name"] == "Alolan "+ dataload[i]["name"]:
-                palolan.append(dataload[i]["name"]) 
+            
             
             
            
