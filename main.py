@@ -74,8 +74,10 @@ class Pokemon(commands.Cog):
                         pname = str(pokeserverpokemonname[i][1])
                         pask = ""
                         for i in range(len(pokemonname)):
+                            if len(pask) == 0 :
                                pask = pask + pokemonname[i]
-                          
+                            else:
+                               pask = pask + " " + pokemonname[i]
                         print(pask)
                         if pname.lower() == pask.lower(): 
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
@@ -262,6 +264,8 @@ def pokemondata():
             print(dataload[i]["name"])
             if dataload[i]["starter"]:
                 pstart.append(dataload[i]["name"])
+            elif dataload[i]["name"].count("Forme") > 0 or dataload[i]["name"].count("Form") > 0 or dataload[i]["name"].count("Ash") > 0 or dataload[i]["name"].count("Style") > 0 or dataload[i]["name"].count("Core") > 0:
+                pform.append(dataload[i]["name"])   
             elif dataload[i]["legendary"] and dataload[i]["mega"] == False:
                 plegend.append(dataload[i]["name"]) 
             elif dataload[i]["mythical"] and dataload[i]["mega"] == False:
@@ -269,9 +273,7 @@ def pokemondata():
             elif dataload[i]["mega"]:
                 pmega.append(dataload[i]["name"])
             elif dataload[i]["name"].count("Alolan") > 0:
-                palolan.append(dataload[i]["name"])
-            elif dataload[i]["name"].count("Forme") > 0 or dataload[i]["name"].count("Form") > 0 or dataload[i]["name"].count("Ash") > 0 or dataload[i]["name"].count("Style") > 0 or dataload[i]["name"].count("Core") > 0:
-                pform.append(dataload[i]["name"])     
+                palolan.append(dataload[i]["name"])  
             elif dataload[i]["family"]["evolutionStage"] == 1 and dataload[i]["mega"] == False:
                 pevo1.append(dataload[i]["name"])      
             elif dataload[i]["family"]["evolutionStage"] == 2 and dataload[i]["mega"] == False:
