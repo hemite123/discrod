@@ -98,6 +98,22 @@ class Pokemon(commands.Cog):
         embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
         embed.add_field(name="Pokemon Data",value=string)
         await ctx.send(embed=embed)
+    
+    async def selectpokemon(self,ctx,author,nomor):
+        userpokemon = db.GetAllPokemon(self,author.id)
+        data = 0 
+        for i in range(len(userpokemon)):
+            if userpokemon[i]["nomor"] == nomor :
+                db.SelectPokemon(self,author.id,nomor)
+                embed = discord.Embed(title="Pokemon Select " + author.name,description=author.name + " Has Selected " + userpokemon[i]["pokemonname"])
+                await ctx.send(embed=embed)
+                return
+            else:
+                data += 0
+            
+        if data == len(userpokemon):
+            embed = discord.Embed(title="Pokemon Select " + author.name,description="You No Have Pokemon With Thats Number")
+            await ctx.send(embed=embed)
 
 
 @bot.event
@@ -228,6 +244,11 @@ async def catch(ctx,*pokename):
 async def mon(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.listpokemon(ctx,ctx.author)
+
+@bot.command(name="mon select",help="Select Your Pokemon")
+async def monsel(ctx,nomor):
+    pokemon = bot.get_cog("Pokemon")
+    await pokemon.selectpokemon(ctx,ctx.author,nomor)
         
 
 def pokemondata():
