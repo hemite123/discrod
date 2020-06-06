@@ -46,3 +46,7 @@ def GetPokemonSelect(self,id):
 def UpdatePokemonInfo(self,id,nomor,level,curexp):
     senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"datapost":"updatepokeinfo","nomor":nomor,"level":level,"curexp":curexp},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
     print(senddata.text)
+
+def SelectPokemon(self,id,nomor):
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"datapost":"selectpokemon","nomor":nomor},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
+    print(senddata.text)
