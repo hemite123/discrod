@@ -245,7 +245,7 @@ async def mon(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.listpokemon(ctx,ctx.author)
 
-@bot.command(name="mon select",help="Select Your Pokemon")
+@bot.command(name="sel",help="Select Your Pokemon")
 async def monsel(ctx,nomor):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.selectpokemon(ctx,ctx.author,nomor)
@@ -277,5 +277,11 @@ def pokemondata():
             
 
 pokemondata()
+print(plegend)
+print(pmythical)
+print(pevo1)
+print(pevo2)
+print(pevo3)
+print(pstart)
 bot.add_cog(Pokemon(bot))
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
