@@ -74,11 +74,11 @@ class Pokemon(commands.Cog):
                         print(i)
                         pname = str(pokeserverpokemonname[i][1])
                         pask = ""
-                        for i in range(len(pokemonname)):
+                        for d in range(len(pokemonname)):
                             if len(pask) == 0 :
-                                pask = pask + pokemonname[i]
+                                pask = pask + pokemonname[d]
                             else:
-                                pask = pask + " " + pokemonname[i]
+                                pask = pask + " " + pokemonname[d]
                         print(pask)
                         if pname.lower() == pask.lower(): 
                             number = db.ManyPokemon(self,author.id) + 1 
