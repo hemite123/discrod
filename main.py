@@ -1,5 +1,5 @@
 import discord
-from discord.ext import commands
+from discord.ext import tasks,commands
 import requests
 import db
 import pymysql
@@ -80,6 +80,7 @@ class Pokemon(commands.Cog):
                                pask = pask + " " + pokemonname[i]
                         print(pask)
                         if pname.lower() == pask.lower(): 
+                            number = db.ManyPokemon(self,author.id) + 1 
                             db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
                             await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                             number = db.ManyPokemon(self,author.id) + 1 
@@ -201,6 +202,7 @@ async def on_message(message):
                                            embed.set_image(url=dataload[i]["sprite"])
                                    await message.channel.send(embed=embed)
                                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
+                                   checkisnone.start()
                                    break
                             
                else:
@@ -255,7 +257,14 @@ async def mon(ctx):
 async def monsel(ctx,nomor):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.selectpokemon(ctx,ctx.author,nomor)
-        
+                                                          
+@tasks.loop(minutes=5.0)
+async def checkisnone():
+    for i in range(len(pokeserverpokemonname)):
+        if pokeserverpokemonname[i][1] is not None:
+            pokeserverpokemonname[i][1] = 0 
+            pokeserverpokemonname[i][1] = 0
+            pokeserverspawntimer[i][1] = 1
 
 def pokemondata():
     with open("pokemon.json") as pokedb:
