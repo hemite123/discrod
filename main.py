@@ -81,13 +81,15 @@ class Pokemon(commands.Cog):
                                 pask = pask + " " + pokemonname[d]
                         print(pask)
                         if pname.lower() == pask.lower(): 
+                            if pokeserverpokemon[i][3] is None:
+                                pokeserverpokemonname[i][3] = author.id
                             if pokeserverpokemonname[i][3] is not None:
-                                pokeserverpokemonname[i][3] = author.name
-                                number = db.ManyPokemon(self,author.id) + 1 
+                                number = db.ManyPokemon(self,pokeserverpokemonname[i][3]) + 1 
                                 db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
-                                ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
+                                ctx.send("<@" + str(pokemonserverpokemonname[i][3]) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                                 pokeserverpokemonname[i][1] = None
                                 pokeserverpokemonname[i][2] = 0
+                                pokeserverpokemonname[i][3] = None
                                 pokeserverspawntimer[i][1] = random.randrange(1,20)
 
                         else:
