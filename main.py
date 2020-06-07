@@ -75,9 +75,9 @@ class Pokemon(commands.Cog):
                         pask = ""
                         for i in range(len(pokemonname)):
                             if len(pask) == 0 :
-                            pask = pask + pokemonname[i]
+                                pask = pask + pokemonname[i]
                             else:
-                            pask = pask + " " + pokemonname[i]
+                                pask = pask + " " + pokemonname[i]
                         print(pask)
                         if pname.lower() == pask.lower(): 
                             number = db.ManyPokemon(self,author.id) + 1 
