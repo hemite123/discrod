@@ -81,12 +81,15 @@ class Pokemon(commands.Cog):
                                 pask = pask + " " + pokemonname[d]
                         print(pask)
                         if pname.lower() == pask.lower(): 
-                            number = db.ManyPokemon(self,author.id) + 1 
-                            db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
-                            await ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
-                            pokeserverpokemonname[i][1] = None
-                            pokeserverpokemonname[i][2] = 0
-                            pokeserverspawntimer[i][1] = random.randrange(1,20)
+                            if pokeserverpokemonname[i][3] is not None:
+                                pokeserverpokemonname[i][3] = author.name
+                                number = db.ManyPokemon(self,author.id) + 1 
+                                db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
+                                ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
+                                pokeserverpokemonname[i][1] = None
+                                pokeserverpokemonname[i][2] = 0
+                                pokeserverspawntimer[i][1] = random.randrange(1,20)
+
                         else:
                             await ctx.send("<@" + str(author.id) + "> Wrong Pokemon Name Try Another Name") 
 
@@ -209,7 +212,7 @@ async def on_message(message):
                             
         if index == len(pokeserverspawntimer):
             pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
-            pokeserverpokemonname.append([message.channel.id,None,0])
+            pokeserverpokemonname.append([message.channel.id,None,0,None])
             spam.append([message.channel.id,None,0,0])
             index = 0
 
