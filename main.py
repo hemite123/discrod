@@ -1,12 +1,5 @@
-import discord
-from discord.ext import tasks,commands
-import requests
-import db
-import pymysql
-import random
-import time
-import json
-import re
+import discord from discord.ext import tasks,commands import requests
+import db import pymysql import random import time import json import re
 
 
 pstart = []
