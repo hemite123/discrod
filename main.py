@@ -270,7 +270,7 @@ async def catch(ctx,*pokename):
 @bot.command(name="mon",help="Check Your Catch Pokemon")
 async def mon(ctx,page=0):
     pokemon = bot.get_cog("Pokemon")
-    await pokemon.listpokemon(ctx,ctx.author)
+    await pokemon.listpokemon(ctx,ctx.author,page)
 
 @bot.command(name="sel",help="Select Your Pokemon")
 async def monsel(ctx,nomor):
