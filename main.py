@@ -114,6 +114,9 @@ class Pokemon(commands.Cog):
                 page.append(string)
                 index = 1
                 string = ""
+        if len(string) > 0:
+            page.append(string)
+            string = ""
         embed = None
         print(page)
         if len(page[pagesmouns-1]) > 0:
