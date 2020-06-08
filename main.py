@@ -101,7 +101,7 @@ class Pokemon(commands.Cog):
     async def listpokemon(self,ctx,author,pagesmouns):
         print(pagesmouns)
         userpokemon = db.GetAllPokemon(self,author.id)
-        page = [[]]
+        page = []
         index = 0 
         pages = 0 
         string = ""
@@ -111,14 +111,13 @@ class Pokemon(commands.Cog):
                 string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
                 index = index + 1
             else:
-                page[pages].append(string)
-                page.append([])
+                page.append(string)
                 index = 0
                 pages = pages + 1
                 string = ""
         embed = None
         print(page)
-        if len(page[pagesmouns][0]) > 0:
+        if len(page[pagesmouns]) > 0:
             embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
             embed.add_field(name="Pokemon Data",value=page[pagesmouns][0])
         else:
