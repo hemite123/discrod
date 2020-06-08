@@ -82,10 +82,10 @@ class Pokemon(commands.Cog):
                         print(pask)
                         if pname.lower() == pask.lower():
                             if pokeserverpokemonname[i][3] is None:
+                                ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]))
                                 pokeserverpokemonname[i][3] = author.id
                                 number = db.ManyPokemon(self,pokeserverpokemonname[i][3]) + 1 
                                 db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
-                                ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                                 pokeserverpokemonname[i][1] = None
                                 pokeserverpokemonname[i][2] = 0
                                 pokeserverpokemonname[i][3] = None
