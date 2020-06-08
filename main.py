@@ -102,18 +102,17 @@ class Pokemon(commands.Cog):
         print(pagesmouns)
         userpokemon = db.GetAllPokemon(self,author.id)
         page = []
-        index = 0 
-        pages = 0 
+        index = 1
         string = ""
         print(len(userpokemon))
         for i in range(len(userpokemon)):
+            print(index)
             if index <= 20:
                 string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
                 index = index + 1
             else:
                 page.append(string)
-                index = 0
-                pages = pages + 1
+                index = 1
                 string = ""
         embed = None
         print(page)
