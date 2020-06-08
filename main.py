@@ -100,7 +100,7 @@ class Pokemon(commands.Cog):
 
     async def listpokemon(self,ctx,author):
         userpokemon = db.GetAllPokemon(self,author.id)
-        page = []
+        page = [[]]
         index = 0 
         pages = 0 
         string = ""
@@ -111,6 +111,7 @@ class Pokemon(commands.Cog):
                 index = index + 1
             else:
                 page[pages].append(string)
+                page.append([])
                 index = 0
                 page = page + 1
                 string = ""
