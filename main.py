@@ -85,7 +85,7 @@ class Pokemon(commands.Cog):
                                 pokeserverpokemonname[i][3] = author.id
                                 number = db.ManyPokemon(self,pokeserverpokemonname[i][3]) + 1 
                                 db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
-                                ctx.send("<@" + str(pokeserverpokemonname[i][3]) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
+                                ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                                 pokeserverpokemonname[i][1] = None
                                 pokeserverpokemonname[i][2] = 0
                                 pokeserverpokemonname[i][3] = None
@@ -100,10 +100,17 @@ class Pokemon(commands.Cog):
 
     async def listpokemon(self,ctx,author):
         userpokemon = db.GetAllPokemon(self,author.id)
-        string = ""
+        page = []
+        index = 0 
+        pages = 0 
         print(len(userpokemon))
         for i in range(len(userpokemon)):
-            string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
+            if index <= 20:
+                string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
+                page[pages].append(string)
+            else:
+                index = 0
+                page = page + 1
         embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
         embed.add_field(name="Pokemon Data",value=string)
         await ctx.send(embed=embed)
