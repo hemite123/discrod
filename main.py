@@ -99,6 +99,7 @@ class Pokemon(commands.Cog):
             await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
     async def listpokemon(self,ctx,author,pagesmouns):
+        print(pagesmouns)
         userpokemon = db.GetAllPokemon(self,author.id)
         page = [[]]
         index = 0 
