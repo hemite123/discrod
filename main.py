@@ -116,7 +116,7 @@ class Pokemon(commands.Cog):
                 string = ""
         embed = None
         print(page)
-        if len(page[pagesmouns]) > 0:
+        if len(page[pagesmouns-1]) > 0:
             embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
             embed.add_field(name="Pokemon Data",value=page[pagesmouns -1])
         else:
@@ -267,7 +267,7 @@ async def catch(ctx,*pokename):
     await pokemon.catchpokemon(ctx,ctx.author,pokename)
 
 @bot.command(name="mon",help="Check Your Catch Pokemon")
-async def mon(ctx,page=0):
+async def mon(ctx,page=1):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.listpokemon(ctx,ctx.author,page)
 
