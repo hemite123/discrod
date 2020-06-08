@@ -98,7 +98,7 @@ class Pokemon(commands.Cog):
         else:
             await ctx.send("<@" + str(author.id) + "> You Dont Start The Game Please Type " +defaultpref[0] + "start To Start The Game")
 
-    async def listpokemon(self,ctx,author):
+    async def listpokemon(self,ctx,author,pagesmouns):
         userpokemon = db.GetAllPokemon(self,author.id)
         page = [[]]
         index = 0 
@@ -116,8 +116,11 @@ class Pokemon(commands.Cog):
                 pages = pages + 1
                 string = ""
         print(page)
-        embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
-        embed.add_field(name="Pokemon Data",value=page[0][0])
+        if len(page[0][pagesmouns] > 0
+            embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
+            embed.add_field(name="Pokemon Data",value=page[0][pagesmouns])
+        else:
+            embed = discord.Embed(title="Pokemon List " + author.name,description="No Pokemon On Page "+ pagesmouns + " " + author.name)   
         await ctx.send(embed=embed)
     
     async def selectpokemon(self,ctx,author,nomor):
@@ -264,7 +267,7 @@ async def catch(ctx,*pokename):
     await pokemon.catchpokemon(ctx,ctx.author,pokename)
 
 @bot.command(name="mon",help="Check Your Catch Pokemon")
-async def mon(ctx):
+async def mon(ctx,page=0):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.listpokemon(ctx,ctx.author)
 
