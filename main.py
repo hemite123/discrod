@@ -116,7 +116,7 @@ class Pokemon(commands.Cog):
                 pages = pages + 1
                 string = ""
         embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
-        embed.add_field(name="Pokemon Data",value=page[0])
+        embed.add_field(name="Pokemon Data",value=page[0][0])
         await ctx.send(embed=embed)
     
     async def selectpokemon(self,ctx,author,nomor):
