@@ -106,8 +106,8 @@ class Pokemon(commands.Cog):
         string = ""
         print(len(userpokemon))
         for i in range(len(userpokemon)):
-            print(index)
-            if index <= 20:
+            print(i)
+            if index < 21:
                 string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
                 index = index + 1
             else:
