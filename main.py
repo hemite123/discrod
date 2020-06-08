@@ -116,9 +116,8 @@ class Pokemon(commands.Cog):
                 index = 0
                 pages = pages + 1
                 string = ""
-        print(page[0][1])
         embed = None
-        if len(page[0][pagesmouns]) > 0:
+        if len(page[pagesmouns][0]) > 0:
             embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
             embed.add_field(name="Pokemon Data",value=page[0][pagesmouns])
         else:
