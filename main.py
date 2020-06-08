@@ -85,7 +85,7 @@ class Pokemon(commands.Cog):
                                 pokeserverpokemonname[i][3] = author.id
                                 number = db.ManyPokemon(self,pokeserverpokemonname[i][3]) + 1 
                                 db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
-                                ctx.send("<@" + str(pokemonserverpokemonname[i][3]) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
+                                ctx.send("<@" + str(pokeserverpokemonname[i][3]) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]) )
                                 pokeserverpokemonname[i][1] = None
                                 pokeserverpokemonname[i][2] = 0
                                 pokeserverpokemonname[i][3] = None
