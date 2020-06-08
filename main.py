@@ -103,14 +103,16 @@ class Pokemon(commands.Cog):
         page = []
         index = 0 
         pages = 0 
+        string = ""
         print(len(userpokemon))
         for i in range(len(userpokemon)):
             if index <= 20:
                 string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
-                page[pages].append(string)
             else:
+                page[pages].append(string)
                 index = 0
                 page = page + 1
+                string = ""
         embed = discord.Embed(title="Pokemon List " + author.name,description="List Pokemon Of "+author.name)
         embed.add_field(name="Pokemon Data",value=string)
         await ctx.send(embed=embed)
