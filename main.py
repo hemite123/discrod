@@ -82,10 +82,10 @@ class Pokemon(commands.Cog):
                         print(pask)
                         if pname.lower() == pask.lower():
                             if pokeserverpokemonname[i][3] is None:
-                                ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])   + " Level " + str(pokeserverpokemonname[i][2]))
                                 pokeserverpokemonname[i][3] = author.id
                                 number = db.ManyPokemon(self,pokeserverpokemonname[i][3]) + 1 
                                 db.InsertPokemon(self,author.id,pokeserverpokemonname[i][1],pokeserverpokemonname[i][2],number)
+                                ctx.send("<@" + str(author.id) + "> You Got " + str(pokeserverpokemonname[i][1])  + " Level " + str(pokeserverpokemonname[i][2]))
                                 pokeserverpokemonname[i][1] = None
                                 pokeserverpokemonname[i][2] = 0
                                 pokeserverpokemonname[i][3] = None
@@ -108,6 +108,7 @@ class Pokemon(commands.Cog):
         for i in range(len(userpokemon)):
             if index <= 20:
                 string = string + "\n "+userpokemon[i]["pokemonname"] +" Level : "+ userpokemon[i]["level"] + " Number " + userpokemon[i]["nomor"]
+                index = index + 1
             else:
                 page[pages].append(string)
                 index = 0
@@ -279,7 +280,7 @@ def pokemondata():
             print(dataload[i]["name"])
             if dataload[i]["starter"]:
                 pstart.append(dataload[i]["name"])
-            elif dataload[i]["name"].count("Forme") > 0 or dataload[i]["name"].count("Form") > 0 or dataload[i]["name"].count("Ash") > 0 or dataload[i]["name"].count("Style") > 0 or dataload[i]["name"].count("Core") > 0:
+            elif dataload[i]["name"].count("Forme") > 0 or dataload[i]["name"].count("Form") > 0 or dataload[i]["name"].count("Ash") > 0 or dataload[i]["name"].count("Style") > 0 or dataload[i]["name"].count("Core") > 0 or dataload[i]["name"].count("Cloak") > 0:
                 pform.append(dataload[i]["name"])   
             elif dataload[i]["legendary"] and dataload[i]["mega"] == False:
                 plegend.append(dataload[i]["name"]) 
