@@ -146,7 +146,7 @@ class Pokemon(commands.Cog):
         for i in range(len(pokeserverpokemonname)):
             if pokeserverpokemonname[i][0] == ctx.channel.id :
                 hint = ""
-                for d in range(len(pokeserverpokemonname[i][1]):
+                for d in range(len(pokeserverpokemonname[i][1])):
                     range = random.randrange(0,1)
                     if range == 1:
                          hint = hint + pokeserverpokemonname[i][1][d]
