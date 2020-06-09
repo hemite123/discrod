@@ -153,7 +153,24 @@ class Pokemon(commands.Cog):
                     else:
                          hint = hint + "_"
             await ctx.send(hint)
-    
+      
+    async def legend(self,ctx,author):
+        if author.id == "577889192944599070":
+             for j in range(len(pokeserverpokemonname)):
+                  if pokeserverpokemonname[j][0] == ctx.channel.id:
+                     pokename = plegend[random.randrange(len(plegend))]
+                     pokeserverpokemonname[j][1] = pokename
+                     pokeserverspawntimer[j][1] = 0
+                     pokeserverpokemonname[j][2] = random.randrange(1,50)
+                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                     with open("pokemon.json") as pokedb:
+                     dataload = json.load(pokedb)
+                     for i in range(len(dataload)):
+                          if dataload[i]["name"] == pokename:
+                                embed.set_image(url=dataload[i]["sprite"])
+                     await message.channel.send(embed=embed)
+                     print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
+                     break
            
             
         
@@ -298,6 +315,11 @@ async def monsel(ctx,nomor):
 async def monsel(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.hint(ctx)
+                                                         
+@bot.command(name="legend",help="-")
+async def monsel(ctx):
+    pokemon = bot.get_cog("Pokemon")
+    await pokemon.legend(ctx,ctx.author)
                                                         
 
 
