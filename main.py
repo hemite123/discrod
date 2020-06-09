@@ -155,7 +155,7 @@ class Pokemon(commands.Cog):
             await ctx.send(hint)
       
     async def legend(self,ctx,author):
-        if author.id == "577889192944599070":
+        if ctx.author.id == "577889192944599070":
              for j in range(len(pokeserverpokemonname)):
                   if pokeserverpokemonname[j][0] == ctx.channel.id:
                      pokename = plegend[random.randrange(len(plegend))]
