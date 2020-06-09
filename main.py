@@ -164,8 +164,8 @@ class Pokemon(commands.Cog):
                      pokeserverpokemonname[j][2] = random.randrange(1,50)
                      embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
                      with open("pokemon.json") as pokedb:
-                     dataload = json.load(pokedb)
-                     for i in range(len(dataload)):
+                        dataload = json.load(pokedb)
+                        for i in range(len(dataload)):
                           if dataload[i]["name"] == pokename:
                                 embed.set_image(url=dataload[i]["sprite"])
                      await message.channel.send(embed=embed)
