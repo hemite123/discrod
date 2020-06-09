@@ -141,7 +141,22 @@ class Pokemon(commands.Cog):
         if data == len(userpokemon):
             embed = discord.Embed(title="Pokemon Select " + author.name,description="You No Have Pokemon With Thats Number")
             await ctx.send(embed=embed)
-
+    
+    async def hint(self,ctx):
+        for i in range(len(pokeserverpokemonname)):
+            if pokeserverpokemonname[i][0] == ctx.channel.id :
+                hint = ""
+                for d in range(len(pokeserverpokemonname[i][1]):
+                    range = random.randrange(0,1)
+                    if range == 1:
+                         hint = hint + pokeserverpokemonname[i][1][d]
+                    else:
+                         hint = hint + "_"
+            await ctx.send(hint)
+    
+           
+            
+        
 
 @bot.event
 async def on_message(message):
@@ -278,6 +293,11 @@ async def mon(ctx,page=1):
 async def monsel(ctx,nomor):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.selectpokemon(ctx,ctx.author,nomor)
+                                                              
+@bot.command(name="hint",help="Wild Pokemon Name Hint")
+async def monsel(ctx):
+    pokemon = bot.get_cog("Pokemon")
+    await pokemon.hint(ctx)
                                                         
 
 
