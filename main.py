@@ -317,7 +317,7 @@ async def monsel(ctx):
     await pokemon.hint(ctx)
                                                          
 @bot.command(name="legend",help="-")
-async def monsel(ctx):
+async def legend(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.legend(ctx,ctx.author)
                                                         
