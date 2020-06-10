@@ -158,6 +158,7 @@ class Pokemon(commands.Cog):
         if ctx.author.id == "577889192944599070":
              for j in range(len(pokeserverpokemonname)):
                   if pokeserverpokemonname[j][0] == ctx.channel.id:
+                     print("Connect")
                      pokename = plegend[random.randrange(len(plegend))]
                      pokeserverpokemonname[j][1] = pokename
                      pokeserverspawntimer[j][1] = 0
@@ -170,7 +171,6 @@ class Pokemon(commands.Cog):
                                 embed.set_image(url=dataload[i]["sprite"])
                      await message.channel.send(embed=embed)
                      print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
-                     break
            
             
         
