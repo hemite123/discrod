@@ -158,21 +158,21 @@ class Pokemon(commands.Cog):
         print(ctx.author.id)
         if ctx.author.id == "577889192944599070":
             print("true")
-             for j in range(len(pokeserverpokemonname)):
-                  if pokeserverpokemonname[j][0] == ctx.channel.id:
-                     print("Connect")
-                     pokename = plegend[random.randrange(len(plegend))]
-                     pokeserverpokemonname[j][1] = pokename
-                     pokeserverspawntimer[j][1] = 0
-                     pokeserverpokemonname[j][2] = random.randrange(1,50)
-                     embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
-                     with open("pokemon.json") as pokedb:
-                        dataload = json.load(pokedb)
-                        for i in range(len(dataload)):
-                          if dataload[i]["name"] == pokename:
-                                embed.set_image(url=dataload[i]["sprite"])
-                     await ctx.send(embed=embed)
-                     print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
+            for j in range(len(pokeserverpokemonname)):
+                 if pokeserverpokemonname[j][0] == ctx.channel.id:
+                    print("Connect")
+                    pokename = plegend[random.randrange(len(plegend))]
+                    pokeserverpokemonname[j][1] = pokename
+                    pokeserverspawntimer[j][1] = 0
+                    pokeserverpokemonname[j][2] = random.randrange(1,50)
+                    embed = discord.Embed(title="Wild Pokemon Has Appeared", description="Catch Your Pokemon Using " + defaultpref[0] +"catch <pokemonname>")
+                    with open("pokemon.json") as pokedb:
+                       dataload = json.load(pokedb)
+                       for i in range(len(dataload)):
+                         if dataload[i]["name"] == pokename:
+                               embed.set_image(url=dataload[i]["sprite"])
+                    await ctx.send(embed=embed)
+                    print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
            
             
         
