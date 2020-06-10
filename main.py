@@ -155,6 +155,7 @@ class Pokemon(commands.Cog):
             await ctx.send(hint)
       
     async def legend(self,ctx,author):
+        print(ctx.author.id)
         if ctx.author.id == "577889192944599070":
              for j in range(len(pokeserverpokemonname)):
                   if pokeserverpokemonname[j][0] == ctx.channel.id:
@@ -312,7 +313,7 @@ async def monsel(ctx,nomor):
     await pokemon.selectpokemon(ctx,ctx.author,nomor)
                                                               
 @bot.command(name="hint",help="Wild Pokemon Name Hint")
-async def monsel(ctx):
+async def hint(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.hint(ctx)
                                                          
