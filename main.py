@@ -156,7 +156,7 @@ class Pokemon(commands.Cog):
       
     async def legend(self,ctx,author):
         print(ctx.author.id)
-        if ctx.author.id == "577889192944599070":
+        if str(ctx.author.id) == "577889192944599070":
             print("true")
             for j in range(len(pokeserverpokemonname)):
                  if pokeserverpokemonname[j][0] == ctx.channel.id:
