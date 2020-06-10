@@ -170,7 +170,7 @@ class Pokemon(commands.Cog):
                         for i in range(len(dataload)):
                           if dataload[i]["name"] == pokename:
                                 embed.set_image(url=dataload[i]["sprite"])
-                     await message.channel.send(embed=embed)
+                     await ctx.send(embed=embed)
                      print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
            
             
@@ -317,7 +317,7 @@ async def hint(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.hint(ctx)
                                                          
-@bot.command(name="legend",help="-")
+@bot.command(name="legend",help="Spawn Pokemon Only Author Bot")
 async def legend(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.legend(ctx,ctx.author)
