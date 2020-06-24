@@ -1,0 +1,6491 @@
+[
+    {
+       "id": 1,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ivysaur"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 38,
+             "evo": "Venusaur"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 2,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Charmeleon"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 48,
+             "evo": "Charizard"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 3,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Wartortle"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 43,
+             "evo": "Blastoise"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 4,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Metapod"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 31,
+             "evo": "Butterfree"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 5,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Kakuna"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 40,
+             "evo": "Beedrill"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 6,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Pidgeotto"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 30,
+             "evo": "Pidgeot"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 7,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Raticate"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Raticate"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 8,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Fearow"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 9,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 10,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 39,
+             "evo": "Raichu"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": [
+                {
+                   "level": 30,
+                   "evo": "Alolan Raichu"
+                }
+             ]
+          }
+       ]
+    },
+    {
+       "id": 11,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Sandslash"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Sandslash"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 12,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Nidorina"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 49,
+             "evo": "Nidoqueen"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 13,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Nidorino"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 31,
+             "evo": "Nidoking"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 14,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 38,
+             "evo": "Clefable"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 15,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ninetales"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Ninetales"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 16,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 47,
+             "evo": "Wigglytuff"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 17,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Golbat"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 43,
+             "evo": "Crobat"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 18,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gloom"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 45,
+             "evo": "Vileplume"
+          },
+          {
+             "level": 41,
+             "evo": "Bellossom"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 19,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Parasect"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 20,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Venomoth"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 21,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dugtrio"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Dugtrio"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 22,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Persian"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Persian"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 23,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Golduck"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 24,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Primeape"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 25,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Arcanine"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 26,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Poliwhirl"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 41,
+             "evo": "Poliwrath"
+          },
+          {
+             "level": 46,
+             "evo": "Politoed"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 27,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Kadabra"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 31,
+             "evo": "Alakazam"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 28,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Machoke"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 31,
+             "evo": "Machamp"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 29,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Weepinbell"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 39,
+             "evo": "Victreebel"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 30,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Tentacruel"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 31,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Graveler"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 35,
+             "evo": "Golem"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Graveler"
+                }
+             ],
+             "evo3": [
+                {
+                   "level": 39,
+                   "evo": "Alolan Golem"
+                }
+             ]
+          }
+       ]
+    },
+    {
+       "id": 32,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Rapidash"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 33,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Slowbro"
+          },
+          {
+             "level": "16",
+             "evo": "Slowking"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 34,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Magneton"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 36,
+             "evo": "Magnezone"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 35,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 36,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dodrio"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 37,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dewgong"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 38,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Muk"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Muk"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 39,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Cloyster"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 40,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Haunter"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 39,
+             "evo": "Gengar"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 41,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Steelix"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 42,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Hypno"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 43,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Kingler"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 44,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Electrode"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 45,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Exeggutor"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Exeggutor"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 46,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Marowak"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [
+                {
+                   "level": "16",
+                   "evo": "Alolan Marowak"
+                }
+             ],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 47,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Hitmonchan"
+          },
+          {
+             "level": "16",
+             "evo": "Hitmontop"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 48,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lickilicky"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 49,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Weezing"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 50,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Rhyhorn"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 31,
+             "evo": "Rhyperior"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 51,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 31,
+             "evo": "Blissey"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 52,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Tangrowth"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 53,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 54,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Seadra"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 33,
+             "evo": "Kingdra"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 55,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Seaking"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 56,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Starmie"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 57,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 58,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Scizor"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 59,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 60,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 33,
+             "evo": "Electivire"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 61,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 41,
+             "evo": "Magmortar"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 62,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 63,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 64,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gyarados"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 65,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 66,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 67,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Vaporeon"
+          },
+          {
+             "level": "16",
+             "evo": "Jolteon"
+          },
+          {
+             "level": "16",
+             "evo": "Flareon"
+          },
+          {
+             "level": "16",
+             "evo": "Espeon"
+          },
+          {
+             "level": "16",
+             "evo": "Umbreon"
+          },
+          {
+             "level": "16",
+             "evo": "Leafeon"
+          },
+          {
+             "level": "16",
+             "evo": "Glaceon"
+          },
+          {
+             "level": "16",
+             "evo": "Sylveon"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 68,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Porygon2"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 42,
+             "evo": "Porygon-Z"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 69,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Omastar"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 70,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Kabutops"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 71,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 72,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 73,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 74,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 75,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 76,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dragonair"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 40,
+             "evo": "Dragonite"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 77,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 78,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 79,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Bayleef"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 40,
+             "evo": "Meganium"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 80,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Quilava"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 35,
+             "evo": "Typhlosion"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 81,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Croconaw"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 42,
+             "evo": "Feraligatr"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 82,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Furret"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 83,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Noctowl"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 84,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ledian"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 85,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ariados"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 86,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lanturn"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 87,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Togetic"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 42,
+             "evo": "Togekiss"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 88,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Xatu"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 89,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Flaaffy"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 46,
+             "evo": "Ampharos"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 90,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 30,
+             "evo": "Azumarill"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 91,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 92,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Skiploom"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 34,
+             "evo": "Jumpluff"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 93,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ambipom"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 94,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Sunflora"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 95,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Yanmega"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 96,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Quagsire"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 97,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Honchkrow"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 98,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Mismagius"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 99,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 100,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 101,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 102,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Forretress"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 103,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 104,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gliscor"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 105,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Granbull"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 106,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 107,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 108,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 109,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Weavile"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 110,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ursaring"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 111,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Magcargo"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 112,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Piloswine"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 35,
+             "evo": "Mamoswine"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 113,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 114,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Octillery"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 115,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 116,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 117,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 118,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Houndoom"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 119,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Donphan"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 120,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 121,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 122,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 123,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 124,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 125,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 126,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Pupitar"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 41,
+             "evo": "Tyranitar"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 127,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 128,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 129,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 130,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Grovyle"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 49,
+             "evo": "Sceptile"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 131,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Combusken"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 45,
+             "evo": "Blaziken"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 132,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Marshtomp"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 47,
+             "evo": "Swampert"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 133,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Mightyena"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 134,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Linoone"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 135,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Silcoon"
+          },
+          {
+             "level": "16",
+             "evo": "Cascoon"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 35,
+             "evo": "Beautifly"
+          },
+          {
+             "level": 49,
+             "evo": "Dustox"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 136,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lombre"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 48,
+             "evo": "Ludicolo"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 137,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Nuzleaf"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 32,
+             "evo": "Shiftry"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 138,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Swellow"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 139,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Pelipper"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 140,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Kirlia"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 33,
+             "evo": "Gardevoir"
+          },
+          {
+             "level": 43,
+             "evo": "Gallade"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 141,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Masquerain"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 142,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Breloom"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 143,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Vigoroth"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 39,
+             "evo": "Slaking"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 144,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ninjask"
+          },
+          {
+             "level": "16",
+             "evo": "Shedinja"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 145,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Loudred"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 38,
+             "evo": "Exploud"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 146,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Hariyama"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 147,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Probopass"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 148,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Delcatty"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 149,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 150,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 151,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lairon"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 49,
+             "evo": "Aggron"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 152,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Medicham"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 153,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Manectric"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 154,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 155,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 156,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 157,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 158,
+       "evo2": [],
+       "evo3": [
+          {
+             "level": 36,
+             "evo": "Roserade"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 159,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Swalot"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 160,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Sharpedo"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 161,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Wailord"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 162,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Camerupt"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 163,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 164,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Grumpig"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 165,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 166,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Vibrava"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 34,
+             "evo": "Flygon"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 167,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Cacturne"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 168,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Altaria"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 169,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 170,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 171,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 172,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 173,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Whiscash"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 174,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Crawdaunt"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 175,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Claydol"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 176,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Cradily"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 177,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Armaldo"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 178,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Milotic"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 179,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 180,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 181,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Banette"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 182,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dusclops"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 43,
+             "evo": "Dusknoir"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 183,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 184,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 185,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 186,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Glalie"
+          },
+          {
+             "level": "16",
+             "evo": "Froslass"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 187,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Sealeo"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 34,
+             "evo": "Walrein"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 188,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Huntail"
+          },
+          {
+             "level": "16",
+             "evo": "Gorebyss"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 189,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 190,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 191,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Shelgon"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 38,
+             "evo": "Salamence"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 192,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Metang"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 41,
+             "evo": "Metagross"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 193,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 194,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 195,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 196,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 197,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 198,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 199,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 200,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 201,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 202,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 203,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Grotle"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 45,
+             "evo": "Torterra"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 204,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Monferno"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 47,
+             "evo": "Infernape"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 205,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Prinplup"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 45,
+             "evo": "Empoleon"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 206,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Staravia"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 44,
+             "evo": "Staraptor"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 207,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Bibarel"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 208,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Kricketune"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 209,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Luxio"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 30,
+             "evo": "Luxray"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 210,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Rampardos"
+          },
+          {
+             "level": "16",
+             "evo": "Bastiodon"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 211,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Wormadam - Plant Cloak"
+          },
+          {
+             "level": "16",
+             "evo": "Wormadam - Sandy Cloak"
+          },
+          {
+             "level": "16",
+             "evo": "Wormadam - Trash Cloak"
+          },
+          {
+             "level": "16",
+             "evo": "Mothim"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 212,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Vespiquen"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 213,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 214,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Floatzel"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 215,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Cherrim - Overcast Form"
+          },
+          {
+             "level": "16",
+             "evo": "Cherrim - Sunshine Form"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 216,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gastrodon"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 217,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Drifblim"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 218,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lopunny"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 219,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Purugly"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 220,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Skuntank"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 221,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Bronzong"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 222,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 223,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 224,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gabite"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 38,
+             "evo": "Garchomp"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 225,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lucario"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 226,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Hippowdon"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 227,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Drapion"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 228,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Toxicroak"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 229,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 230,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lumineon"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 231,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Abomasnow"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 232,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 233,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 234,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 235,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 236,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 237,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 238,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 239,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 240,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 241,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 242,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 243,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 244,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 245,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 246,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 247,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 248,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Servine"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 45,
+             "evo": "Serperior"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 249,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Pignite"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 46,
+             "evo": "Emboar"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 250,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dewott"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 49,
+             "evo": "Samurott"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 251,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Watchog"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 252,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Herdier"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 37,
+             "evo": "Stoutland"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 253,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Liepard"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 254,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Simisage"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 255,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Simisear"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 256,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Simipour"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 257,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Musharna"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 258,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Tranquill"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 33,
+             "evo": "Unfezant"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 259,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Zebstrika"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 260,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Boldore"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 42,
+             "evo": "Gigalith"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 261,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Swoobat"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 262,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Excadrill"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 263,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 264,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gurdurr"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 40,
+             "evo": "Conkeldurr"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 265,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Palpitoad"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 48,
+             "evo": "Seismitoad"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 266,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 267,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 268,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Swadloon"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 34,
+             "evo": "Leavanny"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 269,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Whirlipede"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 49,
+             "evo": "Scolipede"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 270,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Whimsicott"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 271,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lilligant"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 272,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 273,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Krokorok"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 34,
+             "evo": "Krookodile"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 274,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Darmanitan"
+          },
+          {
+             "level": "16",
+             "evo": "Darmanitan - Zen Mode"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 275,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 276,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Crustle"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 277,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Scrafty"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 278,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 279,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Cofagrigus"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 280,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Carracosta"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 281,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Archeops"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 282,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Garbodor"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 283,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Zoroark"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 284,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Cinccino"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 285,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gothorita"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 40,
+             "evo": "Gothitelle"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 286,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Duosion"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 32,
+             "evo": "Reuniclus"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 287,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Swanna"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 288,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Vanillish"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 45,
+             "evo": "Vanilluxe"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 289,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Sawsbuck - Spring Form"
+          },
+          {
+             "level": "16",
+             "evo": "Sawsbuck - Summer Form"
+          },
+          {
+             "level": "16",
+             "evo": "Sawsbuck - Autumn Form"
+          },
+          {
+             "level": "16",
+             "evo": "Sawsbuck - Winter Form"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 290,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 291,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Escavalier"
+          },
+          {
+             "level": "16",
+             "evo": "Silvally"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 292,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Amoonguss"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 293,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Jellicent"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 294,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 295,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Galvantula"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 296,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ferrothorn"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 297,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Klang"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 42,
+             "evo": "Klinklang"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 298,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Eelektrik"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 36,
+             "evo": "Eelektross"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 299,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Beheeyem"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 300,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lampent"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 48,
+             "evo": "Chandelure"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 301,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Fraxure"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 49,
+             "evo": "Haxorus"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 302,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Beartic"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 303,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 304,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Accelgor"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 305,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 306,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Mienshao"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 307,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 308,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Golurk"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 309,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Bisharp"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 310,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 311,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Braviary"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 312,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Mandibuzz"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 313,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 314,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 315,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Zweilous"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 45,
+             "evo": "Hydreigon"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 316,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Volcarona"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 317,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 318,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 319,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 320,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 321,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 322,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 323,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 324,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 325,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 326,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 327,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 328,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 329,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Quilladin"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 37,
+             "evo": "Chesnaught"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 330,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Braixen"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 42,
+             "evo": "Delphox"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 331,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Frogadier"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 37,
+             "evo": "Greninja"
+          },
+          {
+             "level": 33,
+             "evo": "Ash-Greninja"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 332,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Diggersby"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 333,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Fletchinder"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 41,
+             "evo": "Talonflame"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 334,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Spewpa"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 41,
+             "evo": "Vivillon"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 335,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Pyroar"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 336,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Floette"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 44,
+             "evo": "Florges"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 337,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gogoat"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 338,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Pangoro"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 339,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 340,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Meowstic - Male"
+          },
+          {
+             "level": "16",
+             "evo": "Meowstic - Female"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 341,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Doublade"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 38,
+             "evo": "Aegislash"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 342,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Aromatisse"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 343,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Slurpuff"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 344,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Malamar"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 345,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Barbaracle"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 346,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dragalge"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 347,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Clawitzer"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 348,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Heliolisk"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 349,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Tyrantrum"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 350,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Aurorus"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 351,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 352,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 353,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 354,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Sliggoo"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 30,
+             "evo": "Goodra"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 355,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 356,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Trevenant"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 357,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gourgeist"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 358,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Avalugg"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 359,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Noivern"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 360,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 361,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 362,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 363,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 364,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 365,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 366,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Dartrix"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 40,
+             "evo": "Decidueye"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 367,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Torracat"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 46,
+             "evo": "Incineroar"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 368,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Brionne"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 35,
+             "evo": "Primarina"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 369,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Trumbeak"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 46,
+             "evo": "Toucannon"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 370,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Gumshoos"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 371,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Charjabug"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 48,
+             "evo": "Vikavolt"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 372,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Crabominable"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 373,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 374,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Ribombee"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 375,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lycanroc - Midday Form"
+          },
+          {
+             "level": "16",
+             "evo": "Lycanroc - Midnight Form"
+          },
+          {
+             "level": "16",
+             "evo": "Lycanroc - Dusk Form"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 376,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 377,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Toxapex"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 378,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Mudsdale"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 379,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Araquanid"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 380,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Lurantis"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 381,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Shiinotic"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 382,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Salazzle"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 383,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Bewear"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 384,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Steenee"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 38,
+             "evo": "Tsareena"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 385,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 386,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 387,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 388,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Golisopod"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 389,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Palossand"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 394,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 395,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 396,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 397,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 398,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 399,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 400,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Hakamo-o"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 44,
+             "evo": "Kommo-o"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 401,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 402,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 403,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 404,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 405,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Cosmoem"
+          }
+       ],
+       "evo3": [
+          {
+             "level": 30,
+             "evo": "Solgaleo"
+          }
+       ],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 406,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 407,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 408,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 409,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 410,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 411,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 412,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 413,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 414,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 415,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 416,
+       "evo2": [
+          {
+             "level": "16",
+             "evo": "Naganadel"
+          }
+       ],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 417,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 418,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    },
+    {
+       "id": 419,
+       "evo2": [],
+       "evo3": [],
+       "alolan": [
+          {
+             "evo2": [],
+             "evo3": []
+          }
+       ]
+    }
+ ]
