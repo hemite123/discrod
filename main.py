@@ -214,6 +214,7 @@ async def on_message(message):
                     if data != False:         
                         exp = int(data["curexp"]) + xp
                         level = data["level"]
+                        name = data['pokemonname']
                         with open("level.json") as leveldb:
                             dataload = json.load(leveldb)
                             print(dataload[0]["level"])
@@ -222,9 +223,32 @@ async def on_message(message):
                                     if int(exp) > int(dataload[i]["exp"]):
                                         level = int(level) + 1
                                         exp = 0
-                                        embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
-                                        await message.channel.send(embed=embed)
-                        db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)  
+                                        with open("evolution.json") as evodb:
+                                            dataevo = json.load(evodb)
+                                            for m in range(len(dataevo)):
+                                                with open("pokemon.json") as pokedb:
+                                                    dataloadc = json.load(pokedb)
+                                                    for l in range(len(dataload)):
+                                                        if(dataevo[m]["id"] == dataloadc[l]["family"]["id"]):
+                                                            if(dataloadc[l]["name"] == data["pokemonname"]):
+                                                                if(dataloadc[i]["family"]["evolutionStage"] == 1):
+                                                                    if(level > dataevo[m]["evo2"][0]["level"]):
+                                                                        name = dataevo[m]["evo2"][0]["evo"]
+                                                                        embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
+                                                                        await message.channel.send(embed=embed)
+                                                                    else:
+                                                                        embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                                                        await message.channel.send(embed=embed)
+                                                                elif(dataloadc[i]["family"]["evolutionStage"] == 2):
+                                                                    if(level > dataevo[m]["evo3"][0]["level"]):
+                                                                        name = dataevo[m]["evo3"][0]["evo"]
+                                                                        embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
+                                                                        await message.channel.send(embed=embed)
+                                                                    else:
+                                                                        embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                                                        await message.channel.send(embed=embed)
+                                        
+                        db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp,name)  
         index = 0
         for i in range(len(pokeserverspawntimer)):
                 if pokeserverspawntimer[i][0] == message.channel.id:
