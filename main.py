@@ -341,6 +341,9 @@ async def on_ready():
     for chn in chanell:
         print(chn)   
     bot.remove_command("help")
+    for cog in cogs:
+        bot.load_extension(cog)
+    return                                                                           
     
 
 
