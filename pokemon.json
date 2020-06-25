@@ -6916,7 +6916,7 @@
          "legendary":false,
          "mythical":false,
          "ultraBeast":false,
-         "mega":false,
+         "mega":true,
          "gen":6,
          "sprite":"https://cdn.traction.one/pokedex/pokemon/127-mega.png",
          "description":"When the temperature drops at night, it sleeps on treetops or among roots where it is well hidden."
