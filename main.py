@@ -22,6 +22,7 @@ spam = []
 pokeserverspawntimer = []
 pokeserverpokemonname = []
 defaultpref = ['poke']
+xpboost = []
 bot = commands.Bot(command_prefix= defaultpref[0])
 
 class Pokemon(commands.Cog):
@@ -175,14 +176,25 @@ class Pokemon(commands.Cog):
                     print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
            
             
-        
+class Command(commands.Cog):
+    
+    def __init__ (self,bot):
+        self.bot = bot 
+
+    async def help(self,ctx):
+        embed = discord.Embed(title="PokeSenpai Help",description="Follow The Command In Help By Using " + defaultpref[0] + "Command In Help")
+        embed.add_field(name=defaultpref[0]+"catch",value="Using For Catch The Pokemon While The Wild Pokemon Is Spawning On The Server",inline=True)
+        embed.add_field(name=defaultpref[0]+"mon <page>",value="Using For To See The Pokemon Your Already Catch",inline=True)
+        embed.add_field(name=defaultpref[0]+"sel <pokemon number>",value="Using For Change Pokemon To Leveling Or Evolution",inline=True)
+        embed.add_field(name=defaultpref[0]+"start",value="To Start The Game",inline=True)
+        await ctx.send(embed=embed)
 
 @bot.event
 async def on_message(message):
     if message.content is not None:
         print(pokeserverpokemonname)
         print(pokeserverspawntimer)
-        xp = random.randrange(1,50)
+        xp = random.randrange(30,70)
         for ite in range(len(spam)):
             if spam[ite][0] == message.channel.id:
                 if spam[ite][3] > 0:
@@ -205,8 +217,30 @@ async def on_message(message):
                                     if int(exp) > int(dataload[i]["exp"]):
                                         level = int(level) + 1
                                         exp = 0
-                                        embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
-                                        await message.channel.send(embed=embed)
+                                        with open("evolution.json") as evodb:
+                                            dataevo = json.load(evodb)
+                                            for m in range(len(dataevo)):
+                                                with open("pokemon.json") as pokedb:
+                                                    dataloadc = json.load(pokedb)
+                                                    for l in range(len(dataload)):
+                                                        if(dataevo[m]["id"] == dataloadc[l]["family"]["id"]):
+                                                            if(dataloadc[l]["name"] == data["pokemonname"]):
+                                                                if(dataloadc[i]["family"]["evolutionStage"] == 1):
+                                                                    if(level > int(dataevo[m]["evo2"][0]["level"])):
+                                                                        name = dataevo[m]["evo2"][0]["evo"]
+                                                                        embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
+                                                                        await message.channel.send(embed=embed)
+                                                                    else:
+                                                                        embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                                                        await message.channel.send(embed=embed)
+                                                                elif(dataloadc[i]["family"]["evolutionStage"] == 2):
+                                                                    if(level > int(dataevo[m]["evo3"][0]["level"])):
+                                                                        name = dataevo[m]["evo3"][0]["evo"]
+                                                                        embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
+                                                                        await message.channel.send(embed=embed)
+                                                                    else:
+                                                                        embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                                                        await message.channel.send(embed=embed)
                         db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
                         
                 else:                                  
@@ -217,7 +251,6 @@ async def on_message(message):
                         name = data['pokemonname']
                         with open("level.json") as leveldb:
                             dataload = json.load(leveldb)
-                            print(dataload[0]["level"])
                             for i in range (len(dataload)):
                                 if str(dataload[i]["level"]) == str(data["level"]):
                                     if int(exp) > int(dataload[i]["exp"]):
@@ -250,6 +283,7 @@ async def on_message(message):
                                         
                         db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp,name)  
         index = 0
+        #Leveling
         for i in range(len(pokeserverspawntimer)):
                 if pokeserverspawntimer[i][0] == message.channel.id:
                     if pokeserverspawntimer[i][1] > 0:
@@ -260,11 +294,11 @@ async def on_message(message):
                             if pokeserverpokemonname[j][0] == message.channel.id:
                                 if pokeserverpokemonname[j][1] is None:
                                     droprate = random.uniform(0.1,100.0)
-                                    if droprate >= 43.9 or droprate <= 43.9:
+                                    if droprate >= 33.9 or droprate <= 33.9:
                                         pokename = pevo1[random.randrange(len(pevo1))]
-                                    elif droprate <= 35.0:
+                                    elif droprate <= 30.0:
                                         pokename = pevo2[random.randrange(len(pevo2))]
-                                    elif droprate <= 15.0:
+                                    elif droprate <= 10.0:
                                         pokename = pevo3[random.randrange(len(pevo3))]
                                     elif droprate <= 5.0:
                                         pokename = palolan[random.randrange(len(palolan))]
@@ -286,12 +320,13 @@ async def on_message(message):
                                 
                 else:
                     index += 1
-                            
+             
         if index == len(pokeserverspawntimer):
             pokeserverspawntimer.append([message.channel.id,random.randrange(1,20)])
             pokeserverpokemonname.append([message.channel.id,None,0,None])
             spam.append([message.channel.id,None,0,0])
             index = 0
+        #spawn
 
         
         
@@ -305,6 +340,8 @@ async def on_ready():
     chanell = c.get_all_channels()
     for chn in chanell:
         print(chn)   
+    bot.remove_command("help")
+    
 
 
 @bot.command(name="balance",help="See Your Balance")
@@ -346,6 +383,11 @@ async def hint(ctx):
 async def legend(ctx):
     pokemon = bot.get_cog("Pokemon")
     await pokemon.legend(ctx,ctx.author)
+
+@bot.command(name="help")
+async def funcname(ctx):
+    command = bot.get_cog("Command")
+    await command.help(ctx)
                                                         
 
 
