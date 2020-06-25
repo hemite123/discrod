@@ -24,6 +24,7 @@ pokeserverpokemonname = []
 defaultpref = ['poke']
 xpboost = []
 bot = commands.Bot(command_prefix= defaultpref[0])
+bot.remove_command("help")
 
 class Pokemon(commands.Cog):
 
@@ -430,6 +431,5 @@ print(pevo3)
 print(pstart)
 bot.add_cog(Pokemon(bot))
 bot.add_cog(Command(bot))
-bot.remove_command("help")
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
 
