@@ -340,10 +340,7 @@ async def on_ready():
     chanell = c.get_all_channels()
     for chn in chanell:
         print(chn)   
-    bot.remove_command("help")
-    for cog in cogs:
-        bot.load_extension(cog)
-    return                                                                           
+   
     
 
 
@@ -432,5 +429,7 @@ print(pevo2)
 print(pevo3)
 print(pstart)
 bot.add_cog(Pokemon(bot))
+bot.add_cog(Command(bot))
+bot.remove_command("help")
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
 
