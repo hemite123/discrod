@@ -399,7 +399,7 @@ def pokemondata():
             print(dataload[i]["name"])
             if dataload[i]["starter"]:
                 pstart.append(dataload[i]["name"])
-            elif dataload[i]["name"].count("Forme") > 0 or dataload[i]["name"].count("Form") > 0 or dataload[i]["name"].count("Ash") > 0 or dataload[i]["name"].count("Style") > 0 or dataload[i]["name"].count("Core") > 0 or dataload[i]["name"].count("Cloak") > 0:
+            elif dataload[i]["name"].count("Forme") > 0 or dataload[i]["name"].count("Form") > 0 or dataload[i]["name"].count("Ash") > 0 or dataload[i]["name"].count("Style") > 0 or dataload[i]["name"].count("Core") > 0 or dataload[i]["name"].count("Cloak") > 0 or dataload[i]["name"].count("Sun") > 0 or dataload[i]["name"].count("Moon") > 0 or dataload[i]["name"].count("Primal") > 0 or dataload[i]["name"].count("Dusk") > 0 or dataload[i]["name"].count("Dawn") > 0:
                 pform.append(dataload[i]["name"])   
             elif dataload[i]["legendary"] and dataload[i]["mega"] == False:
                 plegend.append(dataload[i]["name"]) 
