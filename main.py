@@ -412,9 +412,14 @@ async def legend(ctx):
     await pokemon.legend(ctx,ctx.author)
 
 @bot.command(name="help")
-async def funcname(ctx):
+async def help(ctx):
     command = bot.get_cog("Command")
     await command.help(ctx)
+
+@bot.command(name="daily")
+async def daily(ctx):
+   pokemon = bot.get_cog("Pokemon")
+   await pokemon.daily(ctx)
                                                         
 
 
