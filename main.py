@@ -7,6 +7,8 @@ import random
 import time
 import json
 import re
+import datetime
+from datetime import datetime
 
 
 pstart = []
@@ -175,6 +177,23 @@ class Pokemon(commands.Cog):
                                embed.set_image(url=dataload[i]["sprite"])
                     await ctx.send(embed=embed)
                     print(f"Pokemon {pokename.lower()} Spawn In Channel Id{pokeserverpokemonname[j][0]}")
+        
+    async def daily(self,ctx):
+        getdata = requests.get("https://projectdiscord.000webhostapp.com/daily.json")
+        respone = getdata.json()
+        index = 0
+        for i in range(len(respone)):
+            if(respone[i]["id"] == ctx.author.id):
+                datec = datetime.fromtimestamp(respone[i]["time"]) + datetime.timedelta(days=1)
+                if(datetime.datetime.now() == datec ):
+                    await ctx.send("Balance Add To Account")
+                else:
+                    await ctx.send(f"You Can Claim The Reward After {datetime.datetime.now().time() - datec.time()}")
+            else:
+                index += 1
+        if(index == len(respone)):
+            await ctx.send("Append New Data")
+
            
             
 class Command(commands.Cog):
@@ -183,7 +202,7 @@ class Command(commands.Cog):
         self.bot = bot 
 
     async def help(self,ctx):
-        embed = discord.Embed(title="PokeSenpai Help",description="Follow The Command In Help By Using " + defaultpref[0] + "Command In Help")
+        embed = discord.Embed(title="PokeSenpai Help",description="Follow The Command In Help By Using " + defaultpref[0] + " Command In Help")
         embed.add_field(name=defaultpref[0]+"catch",value="Using For Catch The Pokemon While The Wild Pokemon Is Spawning On The Server",inline=True)
         embed.add_field(name=defaultpref[0]+"mon <page>",value="Using For To See The Pokemon Your Already Catch",inline=True)
         embed.add_field(name=defaultpref[0]+"sel <pokemon number>",value="Using For Change Pokemon To Leveling Or Evolution",inline=True)
@@ -231,17 +250,25 @@ async def on_message(message):
                                                                         name = dataevo[m]["evo2"][0]["evo"]
                                                                         embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
                                                                         await message.channel.send(embed=embed)
+                                                                        break
                                                                     else:
                                                                         embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                                                         await message.channel.send(embed=embed)
+                                                                        break
                                                                 elif(dataloadc[i]["family"]["evolutionStage"] == 2):
                                                                     if(level > int(dataevo[m]["evo3"][0]["level"])):
                                                                         name = dataevo[m]["evo3"][0]["evo"]
                                                                         embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
                                                                         await message.channel.send(embed=embed)
+                                                                        break
                                                                     else:
                                                                         embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                                                         await message.channel.send(embed=embed)
+                                                                        break
+                                                                else:
+                                                                    embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
+                                                                    await message.channel.send(embed=embed)
+                                                                    break
                         db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
                         
                 else:                                  
@@ -337,10 +364,9 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    c = discord.Client()
-    chanell = c.get_all_channels()
-    for chn in chanell:
-        print(chn)   
+    print(f"{bot.user.name} Has Connect To Server")
+    
+        
    
     
 
