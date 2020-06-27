@@ -194,7 +194,8 @@ class Pokemon(commands.Cog):
         if(index == len(respone)):
             await ctx.send("Append New Data")
             respone.append({"id":ctx.author.id,"time":time.time()})
-            db.UpdateDaily(bot,json)
+            jsondump = json.dump(respone)
+            db.UpdateDaily(bot,jsondump)
 
            
             
