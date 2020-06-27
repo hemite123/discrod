@@ -374,7 +374,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} Has Connect To Server")
-    print(bot.get_all_channels)
+    print(bot.get_all_channels.id)
     
         
    
