@@ -375,7 +375,7 @@ async def on_message(message):
 async def on_ready():
     print(f"{bot.user.name} Has Connect To Server")
     client = discord.Client()
-    print(client.get_all_channels())
+    print(client.get_all_channels("id"))
     
         
    
