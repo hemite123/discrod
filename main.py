@@ -193,6 +193,8 @@ class Pokemon(commands.Cog):
                 index += 1
         if(index == len(respone)):
             await ctx.send("Append New Data")
+            respone.append({"id":ctx.author.id,"time":time.time()})
+            db.UpdateDaily(bot,json)
 
            
             
@@ -463,4 +465,3 @@ print(pstart)
 bot.add_cog(Pokemon(bot))
 bot.add_cog(Command(bot))
 bot.run('NzE2Mjk5NzU0MTg2NzM1NjM4.XtNVgQ.DxqZ-MM-fP7VOR1n0FATHB7XwhU')
-
