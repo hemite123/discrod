@@ -184,19 +184,22 @@ class Pokemon(commands.Cog):
         index = 0
         for i in range(len(respone)):
             if(respone[i]["id"] == ctx.author.id):
-                datec = datetime.fromtimestamp(respone[i]["time"]) + datetime.timedelta(days=1)
+                datec = datetime.fromtimestamp(respone[i]["time"]) + datetime.datetime.timedelta(days=1)
                 if(datetime.datetime.now() == datec ):
-                    await ctx.send("Balance Add To Account")
+                    await ctx.send(f"Added Balance {ctx.author.name} 50 Balance")
+                    respone[i]["time"] = time.time()
+                    jsondump = json.dumps(respone,indent=4)
+                    db.UpdateDaily(bot,jsondump)
                 else:
                     await ctx.send(f"You Can Claim The Reward After {datetime.datetime.now().time() - datec.time()}")
             else:
                 index += 1
         if(index == len(respone)):
-            await ctx.send("Append New Data")
             respone.append({"id":ctx.author.id,"time":time.time()})
             print(respone)
             jsondump = json.dumps(respone,indent=4)
             db.UpdateDaily(bot,jsondump)
+            await ctx.send(f"Added Balance {ctx.author.name} 50 Balance")
 
            
             
@@ -234,6 +237,7 @@ async def on_message(message):
                     if data != False:
                         exp = int(data["curexp"]) + xp
                         level = data["level"]
+                        name = data['pokemonname']
                         with open("level.json") as leveldb:
                             dataload = json.load(leveldb)
                             for i in range (len(dataload)):
@@ -273,7 +277,7 @@ async def on_message(message):
                                                                     embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                                                     await message.channel.send(embed=embed)
                                                                     break
-                        db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp)
+                        db.UpdatePokemonInfo(bot,message.author.id,data["nomor"],level,exp,name)
                         
                 else:                                  
                     data = db.GetPokemonSelect(bot,message.author.id)
