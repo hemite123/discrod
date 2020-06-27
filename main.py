@@ -293,7 +293,7 @@ async def on_message(message):
                                                         if(dataevo[m]["id"] == dataloadc[l]["family"]["id"]):
                                                             if(dataloadc[l]["name"] == data["pokemonname"]):
                                                                 if(dataloadc[i]["family"]["evolutionStage"] == 1):
-                                                                    if(level > int(dataevo[m]["evo2"][0]["level"])):
+                                                                    if(level == int(dataevo[m]["evo2"][0]["level"])):
                                                                         name = dataevo[m]["evo2"][0]["evo"]
                                                                         embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
                                                                         await message.channel.send(embed=embed)
@@ -301,7 +301,7 @@ async def on_message(message):
                                                                         embed = discord.Embed(title="Level Up", description=f"{message.author.name} Your Pokemon {data['pokemonname']} now Level {level}")
                                                                         await message.channel.send(embed=embed)
                                                                 elif(dataloadc[i]["family"]["evolutionStage"] == 2):
-                                                                    if(level > int(dataevo[m]["evo3"][0]["level"])):
+                                                                    if(level == int(dataevo[m]["evo3"][0]["level"])):
                                                                         name = dataevo[m]["evo3"][0]["evo"]
                                                                         embed = discord.Embed(title="Level Up Evolution", description=f"{message.author.name} Your Pokemon {data['pokemonname']} Is Evolution To {name}")
                                                                         await message.channel.send(embed=embed)
