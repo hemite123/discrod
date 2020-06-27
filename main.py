@@ -191,7 +191,7 @@ class Pokemon(commands.Cog):
                     jsondump = json.dumps(respone,indent=4)
                     db.UpdateDaily(bot,jsondump)
                 else:
-                    await ctx.send(f"You Can Claim The Reward After {datetime.now().time() - datec.time()}")
+                    await ctx.send(f"You Can Claim The Reward After {datetime.now() - datec}")
             else:
                 index += 1
         if(index == len(respone)):
