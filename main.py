@@ -185,13 +185,13 @@ class Pokemon(commands.Cog):
         for i in range(len(respone)):
             if(respone[i]["id"] == ctx.author.id):
                 datec = datetime.fromtimestamp(respone[i]["time"]) + timedelta(days=1)
-                if(datetime.datetime.now() == datec ):
+                if(datetime.now() == datec ):
                     await ctx.send(f"Added Balance {ctx.author.name} 50 Balance")
                     respone[i]["time"] = time.time()
                     jsondump = json.dumps(respone,indent=4)
                     db.UpdateDaily(bot,jsondump)
                 else:
-                    await ctx.send(f"You Can Claim The Reward After {datetime.datetime.now().time() - datec.time()}")
+                    await ctx.send(f"You Can Claim The Reward After {datetime.now().time() - datec.time()}")
             else:
                 index += 1
         if(index == len(respone)):
