@@ -50,3 +50,7 @@ def UpdatePokemonInfo(self,id,nomor,level,curexp,name):
 def SelectPokemon(self,id,nomor):
     senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"user_id":id,"datapost":"selectpokemon","nomor":nomor},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
     print(senddata.text)
+
+def UpdateDaily(self,json):
+    senddata = requests.post(url="https://projectdiscord.000webhostapp.com/userdata.php",json={"datapost":"dailyupdate","jsondata":json},headers={"Content-Type":"application/json",'Accept': 'text/plain'})
+    print(senddata.text)
