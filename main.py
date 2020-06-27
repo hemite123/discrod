@@ -374,8 +374,9 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} Has Connect To Server")
-    for chan in bot.get_all_channels:
-        print(chan.id)
+    client = discord.Client()
+    for chan in client.get_all_channels():
+        print(chan)
     
         
    
