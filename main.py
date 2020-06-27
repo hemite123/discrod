@@ -184,7 +184,7 @@ class Pokemon(commands.Cog):
         index = 0
         for i in range(len(respone)):
             if(respone[i]["id"] == ctx.author.id):
-                datec = datetime.fromtimestamp(respone[i]["time"]) + datetime.timedelta(days=1)
+                datec = datetime.fromtimestamp(respone[i]["time"]) + timedelta(days=1)
                 if(datetime.datetime.now() == datec ):
                     await ctx.send(f"Added Balance {ctx.author.name} 50 Balance")
                     respone[i]["time"] = time.time()
