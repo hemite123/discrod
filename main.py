@@ -24,6 +24,7 @@ spam = []
 pokeserverspawntimer = []
 pokeserverpokemonname = []
 defaultpref = ['poke']
+pokespin = []
 xpboost = []
 bot = commands.Bot(command_prefix= defaultpref[0])
 bot.remove_command("help")
@@ -373,6 +374,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} Has Connect To Server")
+    print(bot.get_all_channels)
     
         
    
