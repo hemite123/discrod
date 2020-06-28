@@ -374,9 +374,8 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} Has Connect To Server")
-    for chan in bot.get_all_channels():
-        perm = discord.Permissions(id=chan.id)
-        print(perm.view_channel)
+    for chan in bot.guilds:
+        print(chan)
     
         
    
