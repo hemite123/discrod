@@ -20,7 +20,7 @@ line-bot-sdk==1.14.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
 multidict==4.7.6
-Pillow==7.1.2
+Pillow==10.0.1
 pipenv==2018.11.26
 public==2019.4.13
 pycodestyle==2.6.0
